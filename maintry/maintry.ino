@@ -8,21 +8,15 @@ long lastSendTime = 0;
 long interval = 2000;
 
 
-
-// Create AsyncWebServer object on port 80
-
-
 String getTemperature() {
-  float temperature = bme.readTemperature();
-  // Read temperature as Fahrenheit (isFahrenheit = true)
-  //float t = dht.readTemperature(true);
-  Serial.println(temperature);
+  float temperature, humidity;
+  getDHT22Values(temperature, humidity);
   return String(temperature);
 }
-  
+
 String getHumidity() {
-  float humidity = bme.readHumidity();
-  Serial.println(humidity);
+  float temperature, humidity;
+  getDHT22Values(temperature, humidity);
   return String(humidity);
 }
 

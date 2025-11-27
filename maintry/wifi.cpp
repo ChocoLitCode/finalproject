@@ -1,16 +1,19 @@
 
 #include "wifi.h"
 
-  // Connect to Wi-Fi
-  bool initWifi(){
-     WiFi.begin(ssid, password);
-     return true;
-  }
- 
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(1000);
-    Serial.println("Connecting to WiFi..");
-  }
-
-  // Print ESP32 Local IP Address
-  Serial.println(WiFi.localIP());
+bool initWifi(){
+    WiFi.begin(ssid, password);
+    
+    int attempts = 0;
+    while (WiFi.status() != WL_CONNECTED && attempts < 20) {
+        delay(1000);
+        Serial.println("Connecting to WiFi..");
+        attempts++;
+    }
+    
+    if (WiFi.status() == WL_CONNECTED) {
+        Serial.println("Connected to WiFi");
+        Serial.println(WiFi.localIP());
+        return true;
+    } 
+}

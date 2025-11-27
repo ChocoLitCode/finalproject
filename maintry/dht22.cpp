@@ -8,12 +8,16 @@ bool initDHT22(){
     return true;
   }
 
-void getDHT22Values(float tempValue,float humiValue){
+void getDHT22Values(float &tempValue,float &humiValue){
     // read temperature in Celsius
     tempValue = dht22.readTemperature();
-   
      // read humidity
     humiValue  = dht22.readHumidity();
-   
+
+   if (isnan(tempValue) || isnan(humiValue)) {
+        Serial.println("Failed to read from DHT sensor!");
+        tempValue = 0;
+        humiValue = 0;
+    }
   }
 
