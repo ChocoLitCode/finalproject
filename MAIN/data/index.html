@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ESP32 Smart Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🏠 ESP32 Smart Home System</h1>
+        
+        <div id="intruderAlert" class="alert">
+            <strong>🚨 INTRUDER ALERT!</strong>
+            <p id="intruderMessage">Unauthorized access detected!</p>
+        </div>
+
+        <div class="card sensor-data">
+            <h2>📊 Environment Data</h2>
+            <div class="data-row">
+                <span>Temperature:</span>
+                <span id="temperature" class="value">-- °C</span>
+            </div>
+            <div class="data-row">
+                <span>Humidity:</span>
+                <span id="humidity" class="value">-- %</span>
+            </div>
+        </div>
+
+        <div id="room1Card" class="card">
+            <h2>💡 Room #1 - LDR Controlled Lights</h2>
+            <div class="data-row">
+                <span>Current Status:</span>
+                <span id="room1Status" class="value">--</span>
+            </div>
+            <div class="control-section">
+                <span>Manual Control:</span>
+                <label class="switch">
+                    <input type="checkbox" id="room1Switch">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+
+        <div id="room2Card" class="card">
+            <h2>🔊 Room #2 - Sound Controlled Lights</h2>
+            <div class="data-row">
+                <span>Current Status:</span>
+                <span id="room2Status" class="value">--</span>
+            </div>
+            <div class="control-section">
+                <span>Manual Control:</span>
+                <label class="switch">
+                    <input type="checkbox" id="room2Switch">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let room1State = false;
+        let room2State = false;
+
+        // Add event listeners for the switches
+        document.getElementById('room1Switch').addEventListener('change', toggleRoom1);
+        document.getElementById('room2Switch').addEventListener('change', toggleRoom2);
+
+        function updateUI(data) {
+            // Update sensor data
+            document.getElementById('temperature').textContent = data.temperature + ' °C';
+            document.getElementById('humidity').textContent = data.humidity + ' %';
+            
+            // Update room 1
+            room1State = data.room1;
+            document.getElementById('room1Status').textContent = room1State ? 'ON' : 'OFF';
+            document.getElementById('room1Switch').checked = room1State;
+            document.getElementById('room1Card').className = room1State ? 'card status-on' : 'card status-off';
+            
+            // Update room 2
+            room2State = data.room2;
+            document.getElementById('room2Status').textContent = room2State ? 'ON' : 'OFF';
+            document.getElementById('room2Switch').checked = room2State;
+            document.getElementById('room2Card').className = room2State ? 'card status-on' : 'card status-off';
+        }
+
+        function toggleRoom1() {
+            const newState = !room1State;
+            fetch('/api/room1', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: 'state=' + (newState ? 'on' : 'off')
+            });
+        }
+
+        function toggleRoom2() {
+            const newState = !room2State;
+            fetch('/api/room2', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: 'state=' + (newState ? 'on' : 'off')
+            });
+        }
+
+        function checkIntruder() {
+            fetch('/api/intruder')
+                .then(response => response.json())
+                .then(data => {
+                    const alert = document.getElementById('intruderAlert');
+                    if (data.intruder) {
+                        alert.style.display = 'block';
+                        document.getElementById('intruderMessage').textContent = data.message;
+                    } else {
+                        alert.style.display = 'none';
+                    }
+                });
+        }
+
+        function fetchData() {
+            fetch('/api/data')
+                .then(response => response.json())
+                .then(updateUI)
+                .catch(err => console.error('Error fetching data:', err));
+        }
+
+        // Update data every 2 seconds
+        setInterval(fetchData, 2000);
+        
+        // Check for intruder every 3 seconds
+        setInterval(checkIntruder, 3000);
+        
+        // Initial load
+        fetchData();
+        checkIntruder();
+    </script>
+</body>
+</html>
