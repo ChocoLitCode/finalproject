@@ -28,7 +28,7 @@ void greetingsLCD() {
     if (distance_cm < 10) {
         lcd.clear();
         lcd.setCursor(5, 0);
-        lcd.print("<Greetings>");
+        lcd.print("Halloo");
         delay(5000);
         lcd.clear();
     }

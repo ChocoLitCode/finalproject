@@ -11,7 +11,7 @@ AsyncWebServer server(80);
 const char* ssid = "IoT Diorama";
 const char* password = "12345678";
 
-String intruderMessage = "";
+String intruderMessage = "Intruder Alert!";
 
 String getSensorData() {
     String data = "{";
