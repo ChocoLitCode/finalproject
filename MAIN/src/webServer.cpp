@@ -8,8 +8,8 @@
 
 AsyncWebServer server(80);
 
-const char* ssid = "Your_SSID";
-const char* password = "Your_PASSWORD";
+const char* ssid = "IoT Diorama";
+const char* password = "12345678";
 
 String intruderMessage = "";
 
