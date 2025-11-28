@@ -29,20 +29,20 @@ void webServerSetup() {
         return;
     }
 
-    WiFi.begin(ssid, password);
-    while (WiFi.status() != WL_CONNECTED) {
-        delay(1000);
-        Serial.println("Connecting to WiFi...");
-    }
+   // Set up ESP32 as Access Point (creates its own WiFi network)
+    WiFi.mode(WIFI_AP);
+    WiFi.softAP(ssid, password);
     
-    Serial.println("Connected to WiFi");
+    Serial.println("Access Point Created!");
+    Serial.print("SSID: ");
+    Serial.println(ssid);
     Serial.print("IP address: ");
-    Serial.println(WiFi.localIP());
+    Serial.println(WiFi.softAPIP());
 
     // Serve static files from LittleFS
     server.serveStatic("/", LittleFS, "/").setDefaultFile("index.html");
 
-    // API routes
+    // API routes - using the defined constants
     server.on("/api/data", HTTP_GET, [](AsyncWebServerRequest *request){
         request->send(200, "application/json", getSensorData());
     });
