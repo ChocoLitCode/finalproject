@@ -209,7 +209,7 @@ header {
     cursor: pointer;
 }
 
-/* SENSOR GRID */
+/* SENSOR READINGS GRID */
 .sensor-grid {
     display: grid;
     grid-template-columns: repeat(4, 160px);
@@ -270,4 +270,21 @@ footer {
     text-align: center;
     font-size: 14px;
     margin-top: 50px;
+}
+
+/* HOVER ANIMATIONS */
+.manual-btn:hover,
+.control-card:hover,
+.sensor-card:hover,
+.state-box:hover,
+.title:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+.dark-mode .manual-btn:hover,
+.dark-mode .control-card:hover,
+.dark-mode .sensor-card:hover,
+.dark-mode .state-box:hover,
+.dark-mode .title:hover {
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.15);
 }
