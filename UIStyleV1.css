@@ -392,3 +392,11 @@ footer {
 .dark-mode .title:hover {
     box-shadow: 0 6px 15px rgba(255, 255, 255, 0.25);
 }
+
+
+.dark-mode .notif-close,
+.dark-mode .graph-close {
+    background: #ffffff ;      
+    border-color: #ffffff ;    
+    color: #000000;           
+}
