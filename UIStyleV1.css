@@ -312,6 +312,8 @@ footer {
     background: var(--card-bg);
     border: 2px solid var(--text);
     border-radius: 10px;
+    height: 5px;
+    width: 5px;
     cursor: pointer;
     font-weight: bold;
 }
@@ -387,7 +389,7 @@ footer {
 .graph-close {
     position: fixed;    
     top: 30px;
-    right: 40px;          
+    right: 10px;          
     background: var(--card-bg);
     border: 2px solid var(--text);
     border-radius: 10px;
