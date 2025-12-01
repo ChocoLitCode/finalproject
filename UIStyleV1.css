@@ -4,11 +4,64 @@
     src: url('assets/ShareTech-Regular.ttf') format('truetype');
 }
 
+/* COLOR VARIABLES */
+:root {
+    --bg: #f2f3ff;
+    --panel: #cdcaff;
+    --title: #dad8ff;
+    --header: #b4b2ff;
+    --text: #000;
+    --card-bg: #fff;
+    --sensor-bg: #e0dfff;
+}
+
+/* DARK MODE VARIABLES */
+.dark-mode {
+    --bg: #0f0e17;
+    --panel: #1a1825;
+    --title: #302d47;
+    --header: #26233a;
+    --text: #eae9ff;
+    --card-bg: #2d2b3d;
+    --sensor-bg: #3a3750;
+}
+
+.dark-mode .manual-btn {
+    background: #2d2b3d;
+    color: #eae9ff;
+    border: 2px solid #eae9ff;
+}
+
+.dark-mode .manual-btn:hover {
+    background: #3a3750;
+}
+
+.dark-mode .active {
+    background: #1f8a50;
+    color: #eae9ff;
+    border-color: #eae9ff;
+}
+
+.dark-mode .inactive {
+    background: #99352a;
+    color: #eae9ff;
+    border-color: #eae9ff;
+}
+
+.dark-mode .control-title,
+.dark-mode .sensor-label {
+    background: #2d2b3d;
+    color: #eae9ff;
+    border-color: #eae9ff;
+}
+
+/* BODY */
 body {
     margin: 0;
     padding: 0;
     font-family: 'ShareTech';
-    background: #f2f3ff;
+    background: var(--bg);
+    color: var(--text);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,11 +71,12 @@ body {
 header {
     width: 100%;
     padding: 15px 35px;
-    background: #b4b2ff;
-    border-bottom: 3px solid #000;
+    background: var(--header);
+    border-bottom: 3px solid var(--text);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .header-title {
@@ -40,8 +94,8 @@ header {
 .header-btn {
     width: 42px;
     height: 42px;
-    background: #fff;
-    border: 2px solid #000;
+    background: var(--card-bg);
+    border: 2px solid var(--text);
     border-radius: 12px;
     cursor: pointer;
 }
@@ -51,20 +105,19 @@ header {
 .sensor-card,
 .alert-panel,
 .status-panel {
-    background: #cdcaff;
-    border: 3px solid #333;
+    background: var(--panel);
+    border: 3px solid var(--text);
     border-radius: 18px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.12);
 }
 
 /* TITLES */
 .title {
-    display: inline-block;
-    background: #dad8ff;
+    background: var(--title);
     padding: 6px 18px;
     margin-bottom: 15px;
     border-radius: 30px;
-    border: 2px solid #000;
+    border: 2px solid var(--text);
     font-size: 17px;
     text-align: center;
     width: fit-content;
@@ -82,8 +135,7 @@ header {
     gap: 30px;
 }
 
-.left-col,
-.right-col {
+.left-col, .right-col {
     flex: 1;
 }
 
@@ -105,21 +157,16 @@ header {
 }
 
 .state-box {
-    background: #fff;
-    border: 2px solid #000;
+    background: var(--card-bg);
+    border: 2px solid var(--text);
     border-radius: 12px;
     padding: 10px;
     text-align: center;
     font-weight: bold;
 }
 
-.active {
-    background: #b7ffb7;
-}
-
-.inactive {
-    background: #ffb7b7;
-}
+.active { background: #b7ffb7; }
+.inactive { background: #ffb7b7; }
 
 /* MANUAL CONTROL */
 .panel-row {
@@ -130,15 +177,15 @@ header {
 
 .control-card {
     padding: 20px;
-    background: #cdcaff;
-    border: 3px solid #333;
+    background: var(--panel);
+    border: 3px solid var(--text);
     border-radius: 18px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.12);
 }
 
 .control-title {
-    background: #fff;
-    border: 2px solid #000;
+    background: var(--card-bg);
+    border: 2px solid var(--text);
     border-radius: 12px;
     padding: 10px;
     text-align: center;
@@ -153,8 +200,8 @@ header {
 }
 
 .manual-btn {
-    background: #fff;
-    border: 2px solid #000;
+    background: var(--card-bg);
+    border: 2px solid var(--text);
     border-radius: 15px;
     padding: 12px;
     font-size: 16px;
@@ -162,7 +209,7 @@ header {
     cursor: pointer;
 }
 
-/* SENSOR READINGS */
+/* SENSOR GRID */
 .sensor-grid {
     display: grid;
     grid-template-columns: repeat(4, 160px);
@@ -179,9 +226,9 @@ header {
 }
 
 .sensor-label {
-    background: #fff;
+    background: var(--card-bg);
     padding: 5px 12px;
-    border: 2px solid #777;
+    border: 2px solid var(--text);
     border-radius: 12px;
 }
 
@@ -189,9 +236,9 @@ header {
     width: 85%;
     height: 100px;
     margin-top: 20px;
-    background: #e0dfff;
+    background: var(--sensor-bg);
     border-radius: 12px;
-    border: 2px solid #000;
+    border: 2px solid var(--text);
 }
 
 /* ALERT PANEL */
@@ -206,51 +253,21 @@ header {
 .alert-inner {
     width: 100%;
     padding: 20px;
-    background: #e8e6ff;
-    border: 2px solid #000;
+    background: var(--sensor-bg);
+    border: 2px solid var(--text);
     border-radius: 14px;
     text-align: center;
     font-weight: bold;
     font-size: 18px;
 }
 
-
-.sensor-card:hover,
-.simple-box:hover,
-.status-panel:hover,
-.alert-panel:hover,
-.manual-btn:hover {
-    box-shadow: 0px 6px 14px rgba(0,0,0,15);
-}
-
 /* FOOTER */
 footer {
     width: 100%;
     padding: 12px;
-    background: #b4b2ff;
-    border-top: 3px solid #000;
+    background: var(--header);
+    border-top: 3px solid var(--text);
     text-align: center;
     font-size: 14px;
     margin-top: 50px;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .row {
-        flex-direction: column;
-    }
-
-    .sensor-grid {
-        grid-template-columns: 1fr;
-        place-items: center;
-    }
-
-    .panel-row {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .control-card {
-        width: 100%;
-    }
 }
