@@ -7,7 +7,7 @@
 body {
     margin: 0;
     padding: 0;
-    left: 0;
+    right: 0;
     font-family: 'ShareTech';
     background: #f2f3ff;
     display: flex;
@@ -46,6 +46,10 @@ header {
     background: #ffffff;
     border-radius: 12px;
     cursor: pointer;
+    pointer-events: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* CONTAINER */
