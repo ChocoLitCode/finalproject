@@ -125,40 +125,55 @@ header {
 .active { background: #b7ffb7; }
 .inactive { background: #ffb7b7; }
 
-/* MANUAL CONTROL PANEL */
-.manual-panel-wrapper {
-    margin-top: 25px;
+
+/* MANUAL CONTROLS - NEW 3 BOX LAYOUT */
+.manual-controls-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 15px;
 }
 
-.manual-panel {
-    width: 100%;
+.manual-box {
     background: #cdcaff;
-    padding: 25px;
+    padding: 20px;
     border-radius: 20px;
     border: 3px solid #333;
     box-shadow: 0px 4px 10px rgba(0,0,0,0.12);
-
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
 }
 
+.manual-box-title {
+    background: #ffffff;
+    padding: 6px 15px;
+    border-radius: 15px;
+    border: 2px solid #000;
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+/* Manual Buttons */
 .manual-btn {
     background: #ffffff;
     border: 2px solid #000;
     border-radius: 15px;
-    padding: 12px 15px;
-    font-size: 16px;
+    padding: 10px 14px;
+    font-size: 15px;
     font-weight: bold;
     cursor: pointer;
     transition: 0.25s;
+    width: 130px;
+    text-align: center;
 }
 
-/* Hover Glow */
 .manual-btn:hover {
-    box-shadow: 0px 5px 10px rgba(0,0,0,15);
-  
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.20);
 }
+
 
 /* SENSOR CARDS */
 .sensor-grid {
