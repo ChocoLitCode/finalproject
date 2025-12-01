@@ -31,17 +31,8 @@
     border: 2px solid #eae9ff;
 }
 
-.dark-mode .active {
-    background: #1f8a50;
-    color: #eae9ff;
-    border-color: #eae9ff;
-}
-
-.dark-mode .inactive {
-    background: #99352a;
-    color: #eae9ff;
-    border-color: #eae9ff;
-}
+.dark-mode .active { background: #1f8a50 }
+.dark-mode .inactive { background: #99352a }
 
 .dark-mode .control-title,
 .dark-mode .sensor-label {
