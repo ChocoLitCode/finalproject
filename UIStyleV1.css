@@ -302,13 +302,13 @@ footer {
 .notif-header {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 10px 15px;
     background: var(--header);
     border-bottom: 3px solid var(--text);
 }
 
 .notif-close {
-    padding: 2px 12px;
+    padding: 2px 4px;
     background: var(--card-bg);
     border: 2px solid var(--text);
     border-radius: 10px;
@@ -387,7 +387,7 @@ footer {
 .graph-close {
     position: absolute;    
     bottom: 8px;        
-    right: 35px;          
+    right: 38px;          
     background: var(--card-bg);
     border: 2px solid var(--text);
     border-radius: 10px;
