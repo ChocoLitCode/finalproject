@@ -16,8 +16,9 @@
     <div class="header-title">IoT Diorama Monitoring System</div>
 
     <div class="header-right">
+        <img id="" class="header-btn" src="assets/graph-icon.svg" alt="">
         <img id="darkToggle" class="header-btn" src="assets/dark-icon.svg" alt="dark mode">
-        <img class="header-btn" src="assets/notif-icon.svg" alt="">
+        <img id="notifToggle" class="header-btn" src="assets/notif-icon.svg" alt="">
     </div>
 </header>
 
@@ -111,6 +112,18 @@
 
             <div class="alert-panel">
                 <div id="alertPanel" class="alert-inner">No Alerts</div>
+            </div>
+
+        <!--NOTIF SLIDE-->
+            <div id="notifPanel" class="notif-panel">
+               <div class="notif-header">
+                 <h2>Notifications</h2>
+                  <button id="notifClose" class="notif-close">X</button>
+                </div>
+
+            <div class="notif-content">
+              <div class="notif-item">No new notifications.</div>
+                </div>
             </div>
 
         </div>

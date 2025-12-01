@@ -277,6 +277,58 @@ footer {
     margin-top: 50px;
 }
 
+
+/* NOTIFICATION SLIDER */
+.notif-panel {
+    position: fixed;
+    top: -500px;
+    left: 85%;
+    transform: translateX(-50%);
+    width: 250px;
+    height: 450px;
+    background: var(--panel);
+    border-bottom: 3px solid var(--text);
+    border-radius: 0 0 18px 18px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+    transition: top 0.35s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.notif-panel.open {
+    top: 0;
+}
+
+.notif-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: var(--header);
+    border-bottom: 3px solid var(--text);
+}
+
+.notif-close {
+    padding: 2px 12px;
+    background: var(--card-bg);
+    border: 2px solid var(--text);
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.notif-content {
+    padding: 20px;
+}
+
+.notif-item {
+    background: var(--card-bg);
+    border: 2px solid var(--text);
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
 /* HOVER ANIMATIONS */
 .manual-btn:hover,
 .control-card:hover,
