@@ -282,7 +282,7 @@ footer {
 .notif-panel {
     position: fixed;
     top: -500px;
-    left: 85%;
+    left: 81%;
     transform: translateX(-50%);
     width: 350px;
     height: 450px;
@@ -333,7 +333,7 @@ footer {
 .graph-panel {
     position: fixed;
     top: 0;
-    left: -85%; 
+    left: -90%; 
     width: 50%;
     height: 100%;
     background: var(--panel);
@@ -391,7 +391,7 @@ footer {
     background: var(--card-bg);
     border: 2px solid var(--text);
     border-radius: 10px;
-    padding: 5px -20px;
+    padding: 5px 1px;
     cursor: pointer;
     font-weight: bold;
     font-size: 16px;
