@@ -11,3 +11,14 @@ document.getElementById("notifToggle").addEventListener("click", () => {
 document.getElementById("notifClose").addEventListener("click", () => {
     notifPanel.classList.remove("open");
 });
+
+// GRAPH PANEL TOGGLE
+const graphPanel = document.getElementById("graphPanel");
+
+document.getElementById("graphToggle").addEventListener("click", () => {
+    graphPanel.classList.add("open");
+});
+
+document.getElementById("graphClose")?.addEventListener("click", () => {
+    graphPanel.classList.remove("open");
+});
