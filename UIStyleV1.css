@@ -284,7 +284,7 @@ footer {
     top: -500px;
     left: 81%;
     transform: translateX(-50%);
-    width: 350px;
+    width: 290px;
     height: 450px;
     background: var(--panel);
     border-bottom: 3px solid var(--text);
@@ -385,9 +385,9 @@ footer {
 }
 
 .graph-close {
-    position: absolute;    
-    bottom: 8px;        
-    right: 50px;          
+    position: fixed;    
+    top: 30px;
+    right: 40px;          
     background: var(--card-bg);
     border: 2px solid var(--text);
     border-radius: 10px;
