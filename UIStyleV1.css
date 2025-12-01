@@ -13,6 +13,9 @@
     --text: #000;
     --card-bg: #fff;
     --sensor-bg: #e0dfff;
+    --header-btn-bg: #ffffff;
+
+
 }
 
 /* DARK MODE VARIABLES */
@@ -24,6 +27,8 @@
     --text: #eae9ff;
     --card-bg: #2d2b3d;
     --sensor-bg: #14131b;
+    --header-btn-bg: #ffffff;
+
 }
 
 .dark-mode .manual-btn {
@@ -100,7 +105,7 @@ header {
 .header-btn {
     width: 42px;
     height: 42px;
-    background: var(--card-bg);
+    background: var(--header-btn-bg);
     border: 2px solid var(--text);
     border-radius: 12px;
     cursor: pointer;
