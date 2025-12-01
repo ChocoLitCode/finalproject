@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IoT Diorama UI</title>
-<link rel="stylesheet" href="UIStyleV1.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT Diorama UI</title>
+    <link rel="stylesheet" href="UIStyleV1.css">
 </head>
 
 <body>
+
 <header>
     <div class="header-title">IoT Diorama Monitoring System</div>
 
     <div class="header-right">
-        <object class="header-btn" data="assets/dark-icon.svg" type="image/svg+xml" alt=""></object>
-        <object class="header-btn" data="assets/notif-icon.svg" type="image/svg+xml" alt=""></object>
+        <object class="header-btn" data="assets/dark-icon.svg" type="image/svg+xml"></object>
+        <object class="header-btn" data="assets/notif-icon.svg" type="image/svg+xml"></object>
     </div>
 </header>
 
 <div class="container">
+
+    <!-- FULL 2-COLUMN LAYOUT -->
     <div class="row">
 
-        <!-- LEFT SIDE -->
-        <div>
+        <!-- LEFT COLUMN -->
+        <div class="left-col">
 
             <!-- STATUS -->
             <div class="title">Sensor Current Status</div>
@@ -30,11 +33,11 @@
                 <div class="status-item">Door</div>
                 <div class="status-state active">Active</div>
 
-                <div class="status-item">Room 1 Light</div>
+                <div class="status-item">Light 1</div>
                 <div class="status-state inactive">Inactive</div>
 
-                <div class="status-item">Room 2 Light</div>
-                <div class="status-state inactive">Inactive</div>
+                <div class="status-item">Light 2</div>
+                <div class="status-state active">Active</div>
 
                 <div class="status-item">Humidity</div>
                 <div class="status-state active">Active</div>
@@ -48,61 +51,54 @@
 
             <!-- MANUAL CONTROLS -->
             <div class="manual-panel-wrapper">
-                <p class="title">Manual Controls</p>
+                <div class="title">Manual Controls</div>
 
-                <div class="manual-controls-grid">
-
-                 
-                    <div class="manual-box">
-                        <p class="manual-box-title">Room 1</p>
-                        <button class="manual-btn btn-light1">Room 1 Light</button>
-                    </div>
-
-                  
-                    <div class="manual-box">
-                        <p class="manual-box-title">Room 2</p>
-                        <button class="manual-btn btn-light2">Room 2 Light</button>
-                    </div>
-
-                
-                    <div class="manual-box">
-                        <p class="manual-box-title">Door Controls</p>
-                        <button class="manual-btn btn-door-open">Open Door</button>
-                        <button class="manual-btn btn-door-close">Close Door</button>
-                    </div>
-
+                <div class="manual-panel">
+                    <button class="manual-btn">LIGHT ON</button>
+                    <button class="manual-btn">LIGHT OFF</button>
+                    <button class="manual-btn">OPEN DOOR</button>
+                    <button class="manual-btn">CLOSE DOOR</button>
                 </div>
             </div>
 
         </div>
 
-        <!-- RIGHT SIDE -->
-        <div>
+        <!-- RIGHT COLUMN -->
+        <div class="right-col">
 
-            <div class="title">Sensor Readings</div>
+            <div>
+                <div class="title">Sensor Readings</div>
 
-            <div class="sensor-grid">
+                <div class="sensor-grid">
+                    <div class="sensor-card">
+                        <div class="sensor-label">Humidity</div>
+                        <div class="sensor-display"></div>
+                    </div>
 
-                <div class="sensor-card">
-                    <div class="sensor-label">Humidity</div>
-                    <div class="sensor-display"></div>
+                    <div class="sensor-card">
+                        <div class="sensor-label">Temperature</div>
+                        <div class="sensor-display"></div>
+                    </div>
+
+                    <div class="sensor-card">
+                        <div class="sensor-label">Sound</div>
+                        <div class="sensor-display"></div>
+                    </div>
+
+                    <div class="sensor-card">
+                        <div class="sensor-label">Light</div>
+                        <div class="sensor-display"></div>
+                    </div>
                 </div>
 
-                <div class="sensor-card">
-                    <div class="sensor-label">Temperature</div>
-                    <div class="sensor-display"></div>
-                </div>
+                <!-- ALERT PANEL -->
+                <div class="title" style="margin-top:25px;">Alerts Panel</div>
 
-                <div class="sensor-card">
-                    <div class="sensor-label">Sound</div>
-                    <div class="sensor-display"></div>
+                <div class="alert-panel">
+                    <div id="alertPanel" class="alert-card">
+                        No Alerts
+                    </div>
                 </div>
-
-                <div class="sensor-card">
-                    <div class="sensor-label">Light</div>
-                    <div class="sensor-display"></div>
-                </div>
-
             </div>
 
         </div>
