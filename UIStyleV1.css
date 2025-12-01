@@ -13,12 +13,9 @@
     --text: #000;
     --card-bg: #fff;
     --sensor-bg: #e0dfff;
-
-
-
 }
 
-/* DARK-MODE VARIABLES */
+/* DARK MODE */
 .dark-mode {
     --bg: #0f0e17;
     --panel: #1a1825;
@@ -27,40 +24,8 @@
     --text: #eae9ff;
     --card-bg: #2d2b3d;
     --sensor-bg: #14131b;
-
-
 }
 
-.dark-mode .manual-btn {
-    background: #2d2b3d;
-    color: #eae9ff;
-    border: 2px solid #eae9ff;
-}
-
-.dark-mode .manual-btn:hover {
-    background: #3a3750;
-}
-
-.dark-mode .active {
-    background: #1f8a50;
-    color: #eae9ff;
-    border-color: #eae9ff;
-}
-
-.dark-mode .inactive {
-    background: #99352a;
-    color: #eae9ff;
-    border-color: #eae9ff;
-}
-
-.dark-mode .control-title,
-.dark-mode .sensor-label {
-    background: #2d2b3d;
-    color: #eae9ff;
-    border-color: #eae9ff;
-}
-
-/* BODY */
 body {
     margin: 0;
     padding: 0;
@@ -81,7 +46,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
 }
 
 .header-title {
@@ -185,7 +149,6 @@ header {
     background: var(--panel);
     border: 3px solid var(--text);
     border-radius: 18px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
 }
 
 .control-title {
@@ -193,8 +156,8 @@ header {
     border: 2px solid var(--text);
     border-radius: 12px;
     padding: 10px;
-    text-align: center;
     font-weight: bold;
+    text-align: center;
 }
 
 .control-group {
@@ -214,7 +177,7 @@ header {
     cursor: pointer;
 }
 
-/* SENSOR READINGS GRID */
+/* SENSOR GRID */
 .sensor-grid {
     display: grid;
     grid-template-columns: repeat(4, 160px);
@@ -273,12 +236,10 @@ footer {
     background: var(--header);
     border-top: 3px solid var(--text);
     text-align: center;
-    font-size: 14px;
     margin-top: 50px;
 }
 
-
-/* Notification Slider */
+/* NOTIFICATION SLIDER */
 .notif-panel {
     position: fixed;
     top: -500px;
@@ -288,11 +249,10 @@ footer {
     background: var(--panel);
     border: 3px solid var(--text);
     border-radius: 0 0 18px 18px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
     transition: top 0.35s ease;
     display: flex;
     flex-direction: column;
-
+    z-index: 9999;
 }
 
 .notif-panel.open { top: 0; }
@@ -317,11 +277,11 @@ footer {
     background: var(--card-bg);
     border: 2px solid var(--text);
     border-radius: 10px;
-    font-weight: bold;
     cursor: pointer;
+    font-weight: bold;
 }
 
-/* Graph Slider */
+/* GRAPH SLIDER */
 .graph-panel {
     position: fixed;
     top: 0;
@@ -334,21 +294,19 @@ footer {
     transition: left 0.35s ease;
     padding: 25px;
     overflow-y: auto;
-    z-index: 9999;
+    z-index: 99999;
 }
 
-.graph-panel.open {
-    left: 0;
-}
+.graph-panel.open { left: 0; }
 
 .graph-title {
     font-size: 22px;
     font-weight: bold;
-    margin-bottom: 20px;
     background: var(--title);
     padding: 12px 15px;
     border-radius: 14px;
     border: 2px solid var(--text);
+    margin-bottom: 20px;
     position: relative;
 }
 
@@ -388,13 +346,13 @@ footer {
     border: 2px solid var(--text);
 }
 
-/* HOVER ANIMATIONS */
+/* HOVER */
+.title:hover,
 .manual-btn:hover,
 .control-card:hover,
 .sensor-card:hover,
-.state-box:hover,
-.title:hover {
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+.state-box:hover {
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
 }
 
 .dark-mode .manual-btn:hover,
