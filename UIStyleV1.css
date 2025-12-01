@@ -213,7 +213,7 @@ footer {
     text-align: center;
     font-size: 14px;
     border-top: 3px solid #000;
-    margin-top: 40px;
+    margin-top: auto;
 }
 
 @media(min-width:768px){
