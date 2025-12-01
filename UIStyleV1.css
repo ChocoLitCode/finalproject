@@ -278,34 +278,37 @@ footer {
 }
 
 
-/* NOTIFICATION SLIDER */
+/* Notification Slider */
 .notif-panel {
     position: fixed;
     top: -500px;
-    left: 81%;
-    transform: translateX(-50%);
+    right: 20px;
     width: 290px;
     height: 450px;
     background: var(--panel);
-    border-bottom: 3px solid var(--text);
+    border: 3px solid var(--text);
     border-radius: 0 0 18px 18px;
     box-shadow: 0 6px 12px rgba(0,0,0,0.25);
     transition: top 0.35s ease;
     display: flex;
     flex-direction: column;
+
 }
 
-.notif-panel.open {
-    top: 0;
-}
+.notif-panel.open { top: 0; }
 
 .notif-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 12px;
     background: var(--header);
+    padding: 12px;
     border-bottom: 3px solid var(--text);
+}
+
+.notif-header h2 {
+    margin: 0;
+    font-size: 18px;
 }
 
 .notif-close {
@@ -314,28 +317,15 @@ footer {
     background: var(--card-bg);
     border: 2px solid var(--text);
     border-radius: 10px;
+    font-weight: bold;
     cursor: pointer;
-    font-weight: bold;
 }
 
-.notif-content {
-    padding: 20px;
-}
-
-.notif-item {
-    background: var(--card-bg);
-    border: 2px solid var(--text);
-    border-radius: 12px;
-    padding: 12px;
-    margin-bottom: 12px;
-    font-weight: bold;
-}
-
-/* GRAPH SLIDER PANEL */
+/* Graph Slider */
 .graph-panel {
-    position: relative;
+    position: fixed;
     top: 0;
-    left: -90%; 
+    left: -60%;
     width: 50%;
     height: 100%;
     background: var(--panel);
@@ -356,10 +346,23 @@ footer {
     font-weight: bold;
     margin-bottom: 20px;
     background: var(--title);
-    padding: 10px 15px;
+    padding: 12px 15px;
     border-radius: 14px;
     border: 2px solid var(--text);
     position: relative;
+}
+
+.graph-close {
+    position: absolute;
+    top: 6px;
+    right: 12px;
+    background: var(--card-bg);
+    border: 2px solid var(--text);
+    border-radius: 10px;
+    padding: 3px 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
 }
 
 .graph-grid {
@@ -377,28 +380,12 @@ footer {
 }
 
 .graph-box-title {
-    font-size: 16px;
     font-weight: bold;
-    background: var(--sensor-bg);
-    padding: 8px;
-    border-radius: 10px;
-    border: 2px solid var(--text);
     text-align: center;
-    margin-bottom: 10px;
-}
-
-.graph-close {
-    position: absolute;    
-    top: 30px;
-    right: 10px;          
-    background: var(--card-bg);
-    border: 2px solid var(--text);
+    background: var(--sensor-bg);
     border-radius: 10px;
-    padding: 5px 1px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 16px;
-
+    padding: 8px;
+    border: 2px solid var(--text);
 }
 
 /* HOVER ANIMATIONS */
