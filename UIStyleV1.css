@@ -284,7 +284,7 @@ footer {
     top: -500px;
     left: 85%;
     transform: translateX(-50%);
-    width: 250px;
+    width: 350px;
     height: 450px;
     background: var(--panel);
     border-bottom: 3px solid var(--text);
@@ -302,7 +302,7 @@ footer {
 .notif-header {
     display: flex;
     justify-content: space-between;
-    padding: 10px 15px;
+    padding: 10px 10px;
     background: var(--header);
     border-bottom: 3px solid var(--text);
 }
