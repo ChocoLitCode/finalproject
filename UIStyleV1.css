@@ -214,6 +214,15 @@ header {
     font-size: 18px;
 }
 
+
+.sensor-card:hover,
+.simple-box:hover,
+.status-panel:hover,
+.alert-panel:hover,
+.manual-btn:hover {
+    box-shadow: 0px 6px 14px rgba(0,0,0,15);
+}
+
 /* FOOTER */
 footer {
     width: 100%;
