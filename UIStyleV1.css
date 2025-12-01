@@ -296,6 +296,11 @@ footer {
     font-size: 18px;
 }
 
+.notif-content {
+    padding: 20px;
+}
+
+
 .notif-close {
     width: 28px;
     height: 28px;
