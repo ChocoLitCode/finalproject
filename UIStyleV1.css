@@ -23,7 +23,7 @@
     --header: #ffffff;
     --text: #eae9ff;
     --card-bg: #2d2b3d;
-    --sensor-bg: #3a3750;
+    --sensor-bg: #14131b;
 }
 
 .dark-mode .manual-btn {
@@ -51,6 +51,12 @@
 .dark-mode .control-title,
 .dark-mode .sensor-label {
     background: #2d2b3d;
+    color: #eae9ff;
+    border-color: #eae9ff;
+}
+
+.dark-mode .header-btn{
+    background-color: #ffffff;
     color: #eae9ff;
     border-color: #eae9ff;
 }
