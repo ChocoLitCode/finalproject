@@ -333,7 +333,7 @@ footer {
 .graph-panel {
     position: fixed;
     top: 0;
-    left: -60%; 
+    left: -90%; 
     width: 50%;
     height: 100%;
     background: var(--panel);
@@ -383,6 +383,19 @@ footer {
     margin-bottom: 10px;
 }
 
+.graph-close {
+    position: absolute;
+    top: 22px;             
+    right: 35px;          
+    background: var(--card-bg);
+    border: 2px solid var(--text);
+    border-radius: 10px;
+    padding: 5px 12px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+
+}
 
 /* HOVER ANIMATIONS */
 .manual-btn:hover,
