@@ -335,7 +335,7 @@ footer {
 
 /* GRAPH SLIDER PANEL */
 .graph-panel {
-    position: fixed;
+    position: relative;
     top: 0;
     left: -90%; 
     width: 50%;
