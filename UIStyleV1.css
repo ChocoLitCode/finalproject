@@ -1,4 +1,4 @@
- /* GLOBAL */
+/* GLOBAL */
 @font-face {
     font-family: 'ShareTech';
     src: url('assets/ShareTech-Regular.ttf') format('truetype');
@@ -46,9 +46,8 @@ header {
     cursor: pointer;
 }
 
-/* PANEL STYLE */
+/* PANELS */
 .panel,
-.simple-box,
 .sensor-card,
 .alert-panel,
 .status-panel {
@@ -83,7 +82,8 @@ header {
     gap: 30px;
 }
 
-.left-col, .right-col {
+.left-col,
+.right-col {
     flex: 1;
 }
 
@@ -113,10 +113,21 @@ header {
     font-weight: bold;
 }
 
-.active { background: #b7ffb7; }
-.inactive { background: #ffb7b7; }
+.active {
+    background: #b7ffb7;
+}
 
-/* MANUAL CONTROLS */
+.inactive {
+    background: #ffb7b7;
+}
+
+/* MANUAL CONTROL */
+.panel-row {
+    display: flex;
+    gap: 25px;
+    margin-top: 30px;
+}
+
 .control-card {
     padding: 20px;
     background: #cdcaff;
@@ -151,16 +162,10 @@ header {
     cursor: pointer;
 }
 
-.panel-row {
-    display: flex;
-    gap: 25px;
-    margin-top: 30px;
-}
-
-/* SENSOR CARDS */
+/* SENSOR READINGS */
 .sensor-grid {
     display: grid;
-    grid-template-columns: repeat(2, 160px);
+    grid-template-columns: repeat(4, 160px);
     gap: 25px;
 }
 
@@ -217,26 +222,17 @@ footer {
     border-top: 3px solid #000;
     text-align: center;
     font-size: 14px;
-    position: fixed;
-    bottom: 0;
+    margin-top: 50px;
 }
 
-/* SIMPLE ANIMATION */
-.sensor-card:hover,
-.simple-box:hover,
-.status-panel:hover,
-.alert-panel:hover,
-.manual-btn:hover {
-    box-shadow: 0px 6px 14px rgba(0,0,0,15);
-}
-
+/* RESPONSIVE */
 @media (max-width: 768px) {
     .row {
         flex-direction: column;
     }
 
     .sensor-grid {
-        grid-template-columns: 1fr; /* 1 card per row */
+        grid-template-columns: 1fr;
         place-items: center;
     }
 
