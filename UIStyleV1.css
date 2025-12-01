@@ -314,8 +314,6 @@ footer {
     background: var(--card-bg);
     border: 2px solid var(--text);
     border-radius: 10px;
-    height: 5px;
-    width: 5px;
     cursor: pointer;
     font-weight: bold;
 }
@@ -346,6 +344,7 @@ footer {
     transition: left 0.35s ease;
     padding: 25px;
     overflow-y: auto;
+    z-index: 9999;
 }
 
 .graph-panel.open {
