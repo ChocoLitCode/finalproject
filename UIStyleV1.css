@@ -59,6 +59,7 @@ header {
     text-align: center;
     margin-bottom: 15px;
     font-size: 17px;
+    padding-top: 5px;
     padding: 6px 18px;
     border-radius: 30px;
     background: #dad8ff;
@@ -105,7 +106,6 @@ header {
     padding: 10px;
     font-weight: bold;
     text-align: center;
-    transition: 0.3s;
 }
 
 .active { background: #b7ffb7; }
