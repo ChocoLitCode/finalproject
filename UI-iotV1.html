@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>IoT Diorama UI</title>
-<link rel="stylesheet" href="UIStyleV1.css">
+<link rel="stylesheet" href="UIStyleV2.css">
 </head>
 
 <body>
@@ -19,9 +19,13 @@
 
 
 <div class="container">
+
     <div class="row">
+
         <!-- LEFT SIDE -->
         <div>
+
+            <!-- STATUS -->
             <div class="title">Sensor Current Status</div>
 
             <div class="status-panel status-grid">
@@ -34,13 +38,28 @@
                 <div class="status-item">Humidity</div>
                 <div class="status-state active">Active</div>
             </div>
+
+            <!-- MANUAL CONTROLS -->
+            <div class="manual-panel-wrapper">
+                <p class="title">Manual Controls</p>
+
+                <div class="manual-panel">
+                    <button class="manual-btn btn-light1">Room 1 Light</button>
+                    <button class="manual-btn btn-light2">Room 2 Light</button>
+                    <button class="manual-btn btn-door-open">Open Door</button>
+                    <button class="manual-btn btn-door-close">Close Door</button>
+                </div>
+            </div>
+
         </div>
 
         <!-- RIGHT SIDE -->
         <div>
+
             <div class="title">Sensor Readings</div>
 
             <div class="sensor-grid">
+
                 <div class="sensor-card">
                     <div class="sensor-label">Humidity</div>
                     <div class="sensor-display"></div>
@@ -59,14 +78,14 @@
                 <div class="sensor-card">
                     <div class="sensor-label">Light</div>
                     <div class="sensor-display"></div>
+                </div>
 
-                </div>
-                </div>
             </div>
 
-    
         </div>
+
     </div>
+
 </div>
 
 
