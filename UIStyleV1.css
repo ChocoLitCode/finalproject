@@ -385,8 +385,7 @@ footer {
 }
 
 .graph-close {
-    position: absolute;
-    top: 10px;             
+    position: absolute;            
     right: 35px;          
     background: var(--card-bg);
     border: 2px solid var(--text);
