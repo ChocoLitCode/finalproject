@@ -13,12 +13,12 @@
     --text: #000;
     --card-bg: #fff;
     --sensor-bg: #e0dfff;
-    --header-btn-bg: #ffffff;
+    --header-btn-bg: #fff;
 
 
 }
 
-/* DARK MODE VARIABLES */
+/* DARK-MODE VARIABLES */
 .dark-mode {
     --bg: #0f0e17;
     --panel: #1a1825;
@@ -27,7 +27,7 @@
     --text: #eae9ff;
     --card-bg: #2d2b3d;
     --sensor-bg: #14131b;
-    --header-btn-bg: #ffffff;
+    --header-btn-bg: #fff;
 
 }
 
