@@ -20,7 +20,7 @@
     --bg: #0f0e17;
     --panel: #1a1825;
     --title: #302d47;
-    --header: #26233a;
+    --header: #ffffff;
     --text: #eae9ff;
     --card-bg: #2d2b3d;
     --sensor-bg: #3a3750;
@@ -286,5 +286,5 @@ footer {
 .dark-mode .sensor-card:hover,
 .dark-mode .state-box:hover,
 .dark-mode .title:hover {
-    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.15);
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.25);
 }
