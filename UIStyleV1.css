@@ -25,6 +25,7 @@
     --card-bg: #2d2b3d;
     --sensor-bg: #14131b;
 }
+
 .dark-mode .manual-btn {
     background: #2d2b3d;
     color: #eae9ff;
@@ -40,7 +41,6 @@
     color: #eae9ff;
     border-color: #eae9ff;
 }
-
 
 body {
     margin: 0;
@@ -262,6 +262,7 @@ footer {
     right: 10px;
     width: 260px;
     height: 420px;
+    max-height: 90vh;
     background: var(--panel);
     border: 3px solid var(--text);
     border-radius: 0 0 18px 18px;
@@ -271,7 +272,9 @@ footer {
     z-index: 9999;
 }
 
-.notif-panel.open { top: 0; }
+.notif-panel.open {
+    top: 0;
+}
 
 .notif-header {
     display: flex;
@@ -282,9 +285,9 @@ footer {
     border-bottom: 3px solid var(--text);
 }
 
-.notif-header h2 {
-    margin: 0;
-    font-size: 18px;
+.notif-content {
+    padding: 20px;
+    overflow-y: auto;
 }
 
 .notif-item {
@@ -295,11 +298,6 @@ footer {
     margin-bottom: 12px;
     font-weight: bold;
 }
-
-.notif-content {
-    padding: 20px;
-}
-
 
 .notif-close {
     width: 28px;
@@ -321,13 +319,15 @@ footer {
     background: var(--panel);
     border-right: 3px solid var(--text);
     box-shadow: 6px 0 15px rgba(0,0,0,0.25);
-    transition: left 0.35s ease;
+    transition: left 0.4s ease;
     padding: 25px;
     overflow-y: auto;
     z-index: 99999;
 }
 
-.graph-panel.open { left: 0; }
+.graph-panel.open {
+    left: 0;
+}
 
 .graph-title {
     font-size: 22px;
@@ -385,55 +385,27 @@ footer {
     box-shadow: 0 6px 15px rgba(0,0,0,0.25);
 }
 
-.dark-mode .manual-btn:hover,
-.dark-mode .control-card:hover,
-.dark-mode .sensor-card:hover,
-.dark-mode .state-box:hover,
-.dark-mode .title:hover {
-    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.25);
-}
-
-
 .dark-mode .notif-close,
 .dark-mode .graph-close {
-    background: #ffffff ;      
-    border-color: #ffffff ;    
-    color: #000000;           
+    background: #ffffff;
+    border-color: #ffffff;
+    color: #000000;
 }
+
 /* RESPONSIVENESS */
 
-@media (max-width: 900px) {
-    .row {
-        flex-direction: column;
-    }
-
-    .sensor-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .panel-row {
-        flex-direction: column;
-    }
-
-    .graph-panel {
-        width: 70%;
-        left: -80%;
-    }
-}
-
-
+/* Mobile */
 @media (max-width: 600px) {
-
     header {
         padding: 12px 10px;
     }
-
     .header-title {
         font-size: 18px;
     }
 
+
     .sensor-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .graph-panel {
@@ -445,5 +417,6 @@ footer {
         right: 0;
         width: 100%;
         height: 320px;
+        max-height: 90vh;
     }
 }
