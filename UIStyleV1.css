@@ -413,6 +413,8 @@ footer {
     .graph-panel {
         width: 100%;
         left: -100vw;
+        box-shadow: none;   /* FIX */
+        border-right: none; /* FIX */
     }
 
     .notif-panel {
@@ -422,3 +424,4 @@ footer {
         max-width: 90vh;
     }
 }
+
