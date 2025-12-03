@@ -404,6 +404,16 @@ footer {
         font-size: 18px;
     }
 
+    .row {
+        flex-direction: column;  
+        gap: 20px;               
+    }
+
+    .left-col, 
+    .right-col {
+        width: 100%;
+    }
+
     .sensor-card{
         height: 170px;
         max-width: none;
