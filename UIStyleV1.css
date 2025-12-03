@@ -315,7 +315,7 @@ footer {
 .graph-panel {
     position: fixed;
     top: 0;
-    left: 0;
+    left: -100%;
     width: 40%;
     height: 100%;
     background: var(--panel);
@@ -328,7 +328,7 @@ footer {
 }
 
 .graph-panel.open {
-    transform: translateX(0); 
+    left: 0;
 }
 
 .graph-title {
@@ -422,11 +422,11 @@ footer {
         width: 100% !important;
         border-right: none !important;
         box-shadow: none !important;
-        transform: translateX(-100%) !important;
+        left: 100%;
     }
 
     .notif-panel {
-        width: 100%;  
+        width: 50%;  
     }
 }
 
