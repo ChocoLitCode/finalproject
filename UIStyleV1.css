@@ -441,7 +441,7 @@ footer {
     }
 
     .graph-panel {
-        width: 90%;
+        width: 85%;
         transform: translateX(-100%);
         border-right: none;
         box-shadow: none;
@@ -452,7 +452,7 @@ footer {
     }
 
     .notif-panel {
-        width: 100%;
+        width: 85%;
         transform: translateY(-100%);  
     }
 
