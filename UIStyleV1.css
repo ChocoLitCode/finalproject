@@ -30,7 +30,7 @@
 }
 
 .dark-mode .manual-btn {
-    background: #2d2b3d;
+    background: #0f0e17;
     color: #eae9ff;
     border: 2px solid #eae9ff;
 }
@@ -208,7 +208,7 @@ header {
     background: var(--sensor-card-bg);
     width: 160px;
     max-width: 320px;
-    height: 210px;
+    height: 180px;
     padding-top: 10px;
     display: flex;
     flex-direction: column;
@@ -216,8 +216,7 @@ header {
 }
 
 .sensor-label {
-    align-items: center;
-    width: 110px;
+   
     background: var(--card-bg);
     padding: 5px 12px;
     border: 2px solid var(--text);
