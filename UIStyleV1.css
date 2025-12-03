@@ -430,8 +430,14 @@ footer {
     .graph-panel.open {
         transform: translateX(0);
     }
+
     .notif-panel {
-        width: 50%;  
+        width: 50%;
+        transform: translateY(-100%);  
+    }
+
+    .notif-panel.open {
+        transform: translateY(0);
     }
 }
 
