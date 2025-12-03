@@ -321,11 +321,12 @@ footer {
     box-shadow: 6px 0 15px rgba(0,0,0,0.25);
     transition: left 0.4s ease;
     padding: 25px;
-    overflow-y: auto;
+    overflow-y: auto; 
+    transform: translateX(-100%); 
 }
 
 .graph-panel.open {
-    left: 0;
+    transform: translateX(0); 
 }
 
 .graph-title {
@@ -412,9 +413,9 @@ footer {
 
     .graph-panel {
         width: 100%;
-        left: -100vw;
-        box-shadow: none;   /* FIX */
-        border-right: none; /* FIX */
+        border-right: none;
+        box-shadow: none;
+        transform: translateX(-100%);
     }
 
     .notif-panel {
