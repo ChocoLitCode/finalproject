@@ -20,11 +20,11 @@
 /* DARK MODE */
 .dark-mode {
     --bg: #0f0e17;
-    --panel: #000;
+    --panel:#2d2b3d;
     --title: #302d47;
     --header: #26233a;
     --text: #eae9ff;
-    --card-bg: #2d2b3d;
+    --card-bg:#0f0e17;
     --sensor-bg: #14131b;
     --sensor-card-bg: #2d2b3d; 
 }
