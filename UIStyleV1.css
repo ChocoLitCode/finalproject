@@ -196,7 +196,7 @@ header {
 /* SENSOR GRID */
 .sensor-grid {
     display: grid;
-    grid-template-columns: repeat(4, 160px);
+    grid-template-columns: repeat(4, 1fr);
     gap: 25px;
 }
 
@@ -259,9 +259,9 @@ footer {
 .notif-panel {
     position: fixed;
     top: -500px;
-    right: 20px;
-    width: 290px;
-    height: 450px;
+    right: 10px;
+    width: 260px;
+    height: 420px;
     background: var(--panel);
     border: 3px solid var(--text);
     border-radius: 0 0 18px 18px;
@@ -315,7 +315,7 @@ footer {
 .graph-panel {
     position: fixed;
     top: 0;
-    left: -60%;
+    left: -70%;
     width: 50%;
     height: 100%;
     background: var(--panel);
