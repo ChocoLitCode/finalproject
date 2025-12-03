@@ -270,8 +270,8 @@ footer {
     display: flex;
     flex-direction: column;
     transform: translateY(-100%);
-    transition: transform 0.35s ease; 
-
+    transition: transform 0.35s ease;
+    z-index: 9999;
 }
 
 .notif-panel.open {
@@ -315,15 +315,16 @@ footer {
 .graph-panel {
     position: fixed;
     top: 0;
+    left: 0;
     width: 40%;
     height: 100%;
     background: var(--panel);
     border-right: 3px solid var(--text);
-    box-shadow: 6px 0 15px rgba(0,0,0,0.25);
-    transition: left 0.4s ease;
     padding: 25px;
-    overflow-y: auto; 
-    transform: translateX(-100%); 
+    overflow-y: auto;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
+    z-index: 99999;
 }
 
 .graph-panel.open {
@@ -425,10 +426,7 @@ footer {
     }
 
     .notif-panel {
-        right: 0;
-        width: 100%;
-        height: 320px;
-        max-height: 90vh;
+        width: 100%;  
     }
 }
 
