@@ -315,7 +315,7 @@ footer {
 .graph-panel {
     position: fixed;
     top: 0;
-    left: -100%;
+    left: -600px;
     width: 40%;
     height: 100%;
     background: var(--panel);
@@ -419,10 +419,10 @@ footer {
     }
 
     .graph-panel {
-        width: 100% !important;
+        width: 50% !important;
         border-right: none !important;
         box-shadow: none !important;
-        left: 100%;
+        left: 500px;
     }
 
     .notif-panel {
