@@ -201,7 +201,8 @@ header {
 }
 
 .sensor-card {
-    width: 160px;
+    width: 100%;
+    max-width: 320px;
     height: 180px;
     padding-top: 10px;
     display: flex;
@@ -269,7 +270,6 @@ footer {
     transition: top 0.35s ease;
     display: flex;
     flex-direction: column;
-    z-index: 9999;
 }
 
 .notif-panel.open {
@@ -313,7 +313,7 @@ footer {
 .graph-panel {
     position: fixed;
     top: 0;
-    left: -100%;
+    left: -100%vw;
     width: 40%;
     height: 100%;
     background: var(--panel);
@@ -322,7 +322,6 @@ footer {
     transition: left 0.4s ease;
     padding: 25px;
     overflow-y: auto;
-    z-index: 99999;
 }
 
 .graph-panel.open {
@@ -393,8 +392,6 @@ footer {
 }
 
 /* RESPONSIVENESS */
-
-/* Mobile */
 @media (max-width: 600px) {
     header {
         padding: 12px 10px;
@@ -403,20 +400,25 @@ footer {
         font-size: 18px;
     }
 
+    .sensor-card{
+        height: 170px;
+        max-width: none;
+    }
 
     .sensor-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
     }
 
     .graph-panel {
         width: 100%;
-        left: -100%;
+        left: -100%vw;
     }
 
     .notif-panel {
         right: 0;
         width: 100%;
         height: 320px;
-        max-height: 90vh;
+        max-width: 90vh;
     }
 }
