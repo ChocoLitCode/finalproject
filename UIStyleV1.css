@@ -313,7 +313,7 @@ footer {
 .graph-panel {
     position: fixed;
     top: 0;
-    left: -100%;
+    left: -500px;
     width: 50%;
     height: 100%;
     background: var(--panel);
