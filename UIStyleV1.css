@@ -132,6 +132,7 @@ header {
 
 /* STATUS PANEL */
 .status-panel {
+    max-width: 480px;
     padding: 25px;
 }
 
