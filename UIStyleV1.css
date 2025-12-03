@@ -87,7 +87,6 @@ header {
 
 /* PANELS */
 .panel,
-.sensor-card,
 .alert-panel,
 .status-panel {
     background: var(--panel);
@@ -129,6 +128,7 @@ header {
     flex-direction: column;
     gap: 25px;
 }
+
 
 /* STATUS PANEL */
 .status-panel {
@@ -202,6 +202,7 @@ header {
 }
 
 .sensor-card {
+    background: var(--card-bg);
     width: 100%;
     max-width: 320px;
     height: 180px;
