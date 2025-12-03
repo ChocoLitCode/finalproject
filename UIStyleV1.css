@@ -13,6 +13,8 @@
     --text: #000;
     --card-bg: #fff;
     --sensor-bg: #e0dfff;
+    --sensor-card-bg: #cdcaff; 
+
 }
 
 /* DARK MODE */
@@ -24,6 +26,7 @@
     --text: #eae9ff;
     --card-bg: #2d2b3d;
     --sensor-bg: #14131b;
+    --sensor-card-bg: #2d2b3d; 
 }
 
 .dark-mode .manual-btn {
@@ -202,9 +205,10 @@ header {
 }
 
 .sensor-card {
-    width: 100%;
+    background: var(--sensor-card-bg);
+    width: 160px;
     max-width: 320px;
-    height: 180px;
+    height: 210px;
     padding-top: 10px;
     display: flex;
     flex-direction: column;
@@ -212,6 +216,7 @@ header {
 }
 
 .sensor-label {
+    width: 110px;
     background: var(--card-bg);
     padding: 5px 12px;
     border: 2px solid var(--text);
