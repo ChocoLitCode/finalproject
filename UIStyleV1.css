@@ -421,7 +421,7 @@ footer {
         width: 50% !important;
         border-right: none !important;
         box-shadow: none !important;
-        left: 0;
+        left: -100%;
     }
 
     .notif-panel {
