@@ -414,6 +414,10 @@ footer {
         width: 100%;
     }
 
+    .panel-row {
+       gap: 20px;   
+    }
+
     .control-group {
        display: flex;
        flex-direction: column;
