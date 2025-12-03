@@ -445,7 +445,7 @@ footer {
         transform: translateX(-100%);
         border-right: none;
         box-shadow: none;
-        left: 0;
+        overflow-y: auto;
     }
 
     .graph-panel.open {
@@ -454,8 +454,7 @@ footer {
 
     .notif-panel {
         width: 100%;
-        transform: translateY(-100%);  
-        top: 0;
+        transform: translateY(-100%); 
     }
 
     .notif-panel.open {
