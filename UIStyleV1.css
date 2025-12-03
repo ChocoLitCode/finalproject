@@ -450,7 +450,7 @@ footer {
     }
 
     .notif-panel {
-        width: 100%;
+        width: 75%;
         transform: translateY(-100%); 
     }
 
