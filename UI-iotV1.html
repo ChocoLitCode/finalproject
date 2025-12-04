@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="UIStyleV1.css">
 </head>
 
+<script>
+if (localStorage.getItem("auth") !== "true") {
+    window.location.href = "authentication.html";
+}
+</script>
+
 <body>
 
 <header>
