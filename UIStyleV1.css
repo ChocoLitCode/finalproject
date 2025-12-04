@@ -405,7 +405,7 @@ footer {
     bottom: 0;
     right: 0;
     width: 300px;
-    height: 45%;
+    height: 70%;
     background: var(--panel);
     border-top: 3px solid var(--text);
     border-radius: 18px 18px 0 0;
@@ -447,10 +447,11 @@ footer {
 }
 
 .info-content {
+    overflow-y: auto;
     display: grid;
     flex-direction: column;
     gap: 15px;
-    padding: 20px;
+    padding-right: 8px;
 }
 
 .info-box {
