@@ -544,14 +544,19 @@ footer {
         transform: translateY(0);
     }
 
-    .info-panel {
+   .info-panel {
+        width: 90%;
         height: 80%;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translate(-50%, 100%); 
+    }
+
+    .info-panel.open {
+        transform: translate(-50%, 0); 
     }
 
     .info-content {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; 
     }
 }
 
