@@ -549,7 +549,7 @@ footer {
     }
 
     .info-content {
-        flex-direction: column;
+        grid-template-columns: 1fr;
     }
 }
 
