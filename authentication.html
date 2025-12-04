@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Login - IoT Dashboard</title>
 
+<<<<<<< HEAD
 <style>
 @font-face {
     font-family: 'ShareTech';
@@ -107,7 +108,6 @@ body {
 </div>
 
 <script>
-/* CHANGE USERNAME + PASSWORD HERE */
 const USERNAME = "admin";
 const PASSWORD = "1234";
 
@@ -117,7 +117,7 @@ function login() {
 
     if (u === USERNAME && p === PASSWORD) {
         localStorage.setItem("auth", "true");
-        window.location.href = "index.html"; // your dashboard
+        window.location.href = "Main.html"; 
     } else {
         document.getElementById("error").innerText = "Invalid username or password";
     }
