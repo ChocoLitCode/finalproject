@@ -22,3 +22,8 @@ document.getElementById("graphToggle").addEventListener("click", () => {
 document.getElementById("graphClose")?.addEventListener("click", () => {
     graphPanel.classList.remove("open");
 });
+
+function toggleInfoPanel() {
+    document.getElementById("infoPanel").classList.toggle("open");
+}
+
