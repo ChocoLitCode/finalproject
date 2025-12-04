@@ -448,8 +448,9 @@ footer {
 
 .info-content {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    flex-direction: column;
     gap: 15px;
+    padding: 20px;
 }
 
 .info-box {
