@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>IoT Diorama UI</title>
     <link rel="stylesheet" href="UIStyleV1.css">
 </head>
 
 <script>
+/* authentication redirect */
 if (localStorage.getItem("auth") !== "true") {
     window.location.href = "authentication.html";
 }
@@ -19,9 +20,9 @@ if (localStorage.getItem("auth") !== "true") {
     <div class="header-title">IoT Diorama Monitoring System</div>
 
     <div class="header-right">
-        <img id="graphToggle" class="header-btn" src="assets/graph-icon.svg" alt="">
-        <img id="darkToggle" class="header-btn" src="assets/dark-icon.svg" alt="dark mode">
-        <img id="notifToggle" class="header-btn" src="assets/notif-icon.svg" alt="">
+        <img id="graphToggle" class="header-btn" src="/assets/graph-icon.svg" alt="graph">
+        <img id="darkToggle" class="header-btn" src="/assets/dark-icon.svg" alt="dark mode">
+        <img id="notifToggle" class="header-btn" src="/assets/notif-icon.svg" alt="notifications">
     </div>
 </header>
 
@@ -38,22 +39,22 @@ if (localStorage.getItem("auth") !== "true") {
                 <div class="status-grid">
 
                     <div class="state-box">Door</div>
-                    <div class="state-box active">Active</div>
+                    <div class="state-box active" id="doorState">Active</div>
 
                     <div class="state-box">Light 1</div>
-                    <div class="state-box inactive">Inactive</div>
+                    <div class="state-box inactive" id="light1State">Inactive</div>
 
                     <div class="state-box">Light 2</div>
-                    <div class="state-box active">Active</div>
+                    <div class="state-box active" id="light2State">Active</div>
 
                     <div class="state-box">Humidity</div>
-                    <div class="state-box active">Active</div>
+                    <div class="state-box active" id="humidityState">Active</div>
 
                     <div class="state-box">Temperature</div>
-                    <div class="state-box active">Active</div>
+                    <div class="state-box active" id="temperatureState">Active</div>
 
                     <div class="state-box">Sound</div>
-                    <div class="state-box active">Active</div>
+                    <div class="state-box active" id="soundState">Active</div>
 
                 </div>
             </div>
@@ -67,8 +68,15 @@ if (localStorage.getItem("auth") !== "true") {
 
                     <div class="control-group">
                         <div class="control-title">Light</div>
-                        <button class="manual-btn">ON</button>
-                        <button class="manual-btn">OFF</button>
+                        <!-- Room 1 control buttons mapped to IDs used by your JS -->
+                        <button id="room1On" class="manual-btn">ON</button>
+                        <button id="room1Off" class="manual-btn">OFF</button>
+                        <button id="room1Auto" class="manual-btn">AUTO</button>
+
+                        <!-- text showing current state; used by JS as room1State -->
+                        <div style="margin-top:10px; text-align:center;">
+                            State: <strong id="room1State">AUTO</strong>
+                        </div>
                     </div>
                 </div>
 
@@ -102,22 +110,56 @@ if (localStorage.getItem("auth") !== "true") {
             <div class="title">Sensor Readings</div>
 
             <div class="sensor-grid">
-                <div class="sensor-card"><div class="sensor-label">Humidity</div><div class="sensor-display"></div></div>
-                <div class="sensor-card"><div class="sensor-label">Temperature</div><div class="sensor-display"></div></div>
-                <div class="sensor-card"><div class="sensor-label">Sound</div><div class="sensor-display"></div></div>
-                <div class="sensor-card"><div class="sensor-label">Light 1</div><div class="sensor-display"></div></div>
-                <div class="sensor-card"><div class="sensor-label">Light 2</div><div class="sensor-display"></div></div>
-                <div class="sensor-card"><div class="sensor-label">Touch 1</div><div class="sensor-display"></div></div>
-                <div class="sensor-card"><div class="sensor-label">Touch 2</div><div class="sensor-display"></div></div>
+                <!-- Humidity card: insert id="humidity" and id="humidTime" -->
+                <div class="sensor-card">
+                    <div class="sensor-label">Humidity</div>
+                    <div class="sensor-display">
+                        <p style="margin:0; font-weight:bold;"><span id="humidity">0.0</span> %</p>
+                        <div style="font-size:12px; margin-top:8px;">Last: <span id="humidTime">--:--:--</span></div>
+                    </div>
+                </div>
+
+                <!-- Temperature card: insert id="temperature" and id="tempTime" -->
+                <div class="sensor-card">
+                    <div class="sensor-label">Temperature</div>
+                    <div class="sensor-display">
+                        <p style="margin:0; font-weight:bold;"><span id="temperature">0.0</span> &deg;C</p>
+                        <div style="font-size:12px; margin-top:8px;">Last: <span id="tempTime">--:--:--</span></div>
+                    </div>
+                </div>
+
+                <div class="sensor-card">
+                    <div class="sensor-label">Sound</div>
+                    <div class="sensor-display"></div>
+                </div>
+
+                <div class="sensor-card">
+                    <div class="sensor-label">Light 1</div>
+                    <div class="sensor-display"></div>
+                </div>
+
+                <div class="sensor-card">
+                    <div class="sensor-label">Light 2</div>
+                    <div class="sensor-display"></div>
+                </div>
+
+                <div class="sensor-card">
+                    <div class="sensor-label">Touch 1</div>
+                    <div class="sensor-display"></div>
+                </div>
+
+                <div class="sensor-card">
+                    <div class="sensor-label">Touch 2</div>
+                    <div class="sensor-display"></div>
+                </div>
             </div>
+
 
             <div class="title" style="margin-top:25px;">Alerts Panel</div>
 
             <div class="alert-panel">
                 <div id="alertPanel" class="alert-inner">No Alerts</div>
             </div>
-
-
 
         </div>
     </div>
@@ -141,7 +183,6 @@ if (localStorage.getItem("auth") !== "true") {
 <!-- GRAPH SLIDER PANEL -->
 <div id="graphPanel" class="graph-panel">
 
-    
     <div class="graph-title">
         Graph & History
         <button id="graphClose" class="graph-close">X</button>
@@ -169,28 +210,27 @@ if (localStorage.getItem("auth") !== "true") {
 
 </div>
 
-
-
 <footer>
-<button class="info-btn" onclick="toggleInfoPanel()">About Us</button>
+    <button class="info-btn" onclick="toggleInfoPanel()">About Us</button>
 
-<!-- INFO PANEL -->
-<div id="infoPanel" class="info-panel">
-    <div class="info-header">
-        <span class="info-title">About Us</span>
-        <button class="info-close" onclick="toggleInfoPanel()">X</button>
-    </div>
+    <!-- INFO PANEL -->
+    <div id="infoPanel" class="info-panel">
+        <div class="info-header">
+            <span class="info-title">About Us</span>
+            <button class="info-close" onclick="toggleInfoPanel()">X</button>
+        </div>
 
-    <div class="info-content">
-        <div class="info-box">Trichelle Josol</div>
-        <div class="info-box">Ken Nathaneil Almeda</div>
-        <div class="info-box">Jerick Janaban</div>
-        <div class="info-box">Cathlea Talagon</div>
-        <div class="info-box">Kenneth Pagarigan</div>
-        <div class="info-box">Justin Salivio</div>
+        <div class="info-content">
+            <div class="info-box">Trichelle Josol</div>
+            <div class="info-box">Ken Nathaneil Almeda</div>
+            <div class="info-box">Jerick Janaban</div>
+            <div class="info-box">Cathlea Talagon</div>
+            <div class="info-box">Kenneth Pagarigan</div>
+            <div class="info-box">Justin Salivio</div>
+        </div>
     </div>
-    </div>
-    </footer>
+</footer>
+
+<script src="UIScriptV1.js"></script>
 </body>
-   <script src="UIScriptV1.js"></script>
 </html>
