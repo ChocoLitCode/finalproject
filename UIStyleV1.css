@@ -162,6 +162,7 @@ header {
     display: flex;
     gap: 25px;
     margin-top: 30px;
+    justify-content: space-between;
 }
 
 .control-card {
