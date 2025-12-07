@@ -481,6 +481,15 @@ footer {
     font-weight: bold;
 }
 
+.controls-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
 .sensor-grid-vertical {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
