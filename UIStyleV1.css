@@ -458,12 +458,28 @@ footer {
     font-size: 16px;
 }
 
-.control-column {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
+.control-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
 }
 
+.control-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 15px;
+}
+
+.control-label {
+    background: var(--card-bg);
+    border: 2px solid var(--text);
+    padding: 8px;
+    text-align: center;
+    border-radius: 12px;
+    font-weight: bold;
+}
 
 .sensor-grid-vertical {
     display: grid;
