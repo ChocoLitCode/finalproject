@@ -33,7 +33,7 @@ if (localStorage.getItem("auth") !== "true") {
         <!-- LEFT COLUMN -->
         <div class="left-col">
 
-            <div class="title">Sensor Current Status</div>
+            <div class="title">Current Status</div>
 
             <div class="status-panel">
                 <div class="status-grid">
@@ -47,14 +47,6 @@ if (localStorage.getItem("auth") !== "true") {
                     <div class="state-box">Light 2</div>
                     <div class="state-box active" id="light2State">Active</div>
 
-                    <div class="state-box">Humidity</div>
-                    <div class="state-box active" id="humidityState">Active</div>
-
-                    <div class="state-box">Temperature</div>
-                    <div class="state-box active" id="temperatureState">Active</div>
-
-                    <div class="state-box">Sound</div>
-                    <div class="state-box active" id="soundState">Active</div>
 
                 </div>
             </div>
@@ -68,12 +60,12 @@ if (localStorage.getItem("auth") !== "true") {
 
                     <div class="control-group">
                         <div class="control-title">Light</div>
-                        <!-- Room 1 control buttons mapped to IDs used by your JS -->
+                        
                         <button id="room1On" class="manual-btn">ON</button>
                         <button id="room1Off" class="manual-btn">OFF</button>
                         <button id="room1Auto" class="manual-btn">AUTO</button>
 
-                        <!-- text showing current state; used by JS as room1State -->
+                    
                         <div style="margin-top:10px; text-align:center;">
                             State: <strong id="room1State">AUTO</strong>
                         </div>
@@ -126,26 +118,6 @@ if (localStorage.getItem("auth") !== "true") {
 
                 <div class="sensor-card">
                     <div class="sensor-label">Sound</div>
-                    <div class="sensor-display"></div>
-                </div>
-
-                <div class="sensor-card">
-                    <div class="sensor-label">Light 1</div>
-                    <div class="sensor-display"></div>
-                </div>
-
-                <div class="sensor-card">
-                    <div class="sensor-label">Light 2</div>
-                    <div class="sensor-display"></div>
-                </div>
-
-                <div class="sensor-card">
-                    <div class="sensor-label">Touch 1</div>
-                    <div class="sensor-display"></div>
-                </div>
-
-                <div class="sensor-card">
-                    <div class="sensor-label">Touch 2</div>
                     <div class="sensor-display"></div>
                 </div>
             </div>
