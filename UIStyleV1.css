@@ -125,13 +125,8 @@ header {
 }
 
 .left-col, .right-col {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-
+    flex: 1;
 }
-
-
 /* STATUS PANEL */
 .status-panel {
     max-width: 480px;
