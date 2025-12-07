@@ -42,6 +42,12 @@ const room1OffBtn   = document.getElementById("room1Off");
 const room1AutoBtn  = document.getElementById("room1Auto");
 const room1StateTxt = document.getElementById("room1State");
 
+// Room 2 elements
+const room2OnBtn    = document.getElementById("room2On");
+const room2OffBtn   = document.getElementById("room2Off");
+const room2AutoBtn  = document.getElementById("room2Auto");
+const room2StateTxt = document.getElementById("room2State");
+
 function getCurrentTime() {
     return new Date().toLocaleTimeString();
 }
@@ -89,6 +95,11 @@ function onMessage(event) {
             room1StateTxt.textContent = data.room1;
         }
 
+        // ★ ROOM 2 LIVE UPDATE (Added)
+        if (data.room2 !== undefined) {
+            room2StateTxt.textContent = data.room2;
+        }
+
         lastUpdateElement.textContent = getCurrentTime();
 
     } catch (err) {
@@ -117,7 +128,19 @@ room1OnBtn?.addEventListener("click", () => sendRoom1Command("ON"));
 room1OffBtn?.addEventListener("click", () => sendRoom1Command("OFF"));
 room1AutoBtn?.addEventListener("click", () => sendRoom1Command("AUTO"));
 
-// Start WebSocket when the page loads
+// ROOM 2 COMMANDS
+function sendRoom2Command(cmd) {
+    if (websocket && websocket.readyState === WebSocket.OPEN) {
+        websocket.send("room2:" + cmd);
+        room2StateTxt.textContent = cmd;
+    }
+}
+
+room2OnBtn?.addEventListener("click", () => sendRoom2Command("ON"));
+room2OffBtn?.addEventListener("click", () => sendRoom2Command("OFF"));
+room2AutoBtn?.addEventListener("click", () => sendRoom2Command("AUTO"));
+
+
 window.addEventListener("load", () => {
     initWebSocket();
 
