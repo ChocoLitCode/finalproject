@@ -54,6 +54,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 100vh;
 }
 
 /* HEADER */
@@ -115,6 +116,7 @@ header {
 .container {
     width: 92%;
     margin-top: 30px;
+    flex: 1;
 }
 
 .row {
