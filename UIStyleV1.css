@@ -118,10 +118,10 @@ header {
 }
 
 .row {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    align-items: start;
 }
 
 .left-col, .right-col {
@@ -192,11 +192,10 @@ header {
     cursor: pointer;
 }
 
-/* SENSOR GRID */
 .sensor-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .sensor-card {
