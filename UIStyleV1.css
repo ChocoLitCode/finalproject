@@ -526,8 +526,31 @@ footer {
     }
 
     .row {
+        display: flex;
         flex-direction: column;  
-        gap: 20px;               
+        gap: 30px;
+        width: 100%;
+    }
+
+    .column {
+        width: 100%;
+    }
+
+    .controls-grid {
+        grid-template-columns: 1fr;  /* 1 column on mobile */
+    }
+
+    .sensor-grid-vertical {
+        grid-template-columns: 1fr; /* stack sensors */
+    }
+
+    .control-card {
+        width: 100%;
+    }
+
+    footer {
+        margin-top: 40px;
+        position: relative;
     }
 
     .left-col, 
