@@ -593,7 +593,7 @@ footer {
     }
 
     .control-card {
-        width: 80%;    
+        width: 90%;    
         max-width: 250px;         
         margin: 0 auto;           
     }
@@ -627,7 +627,7 @@ footer {
 
 
     .status-panel {
-        width: 100%;
+        width: 90%;
         max-width: 300px;
         margin: 0 auto;
     }
@@ -636,13 +636,6 @@ footer {
         grid-template-columns: 1fr 1fr;
         gap: 10px;
     }
-
-
-
-    .control-card {
-        width: 85%;
-    }
-
 
 
     footer {
