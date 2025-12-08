@@ -139,7 +139,7 @@ header {
 
 /* STATUS PANEL */
 .status-panel {
-    width: 420px;
+    width: 350px;
     max-width: 420px;
     padding: 25px;
 }
@@ -479,6 +479,7 @@ footer {
 
 /* RESPONSIVENESS */
 @media (max-width: 600px) {
+
     header {
         padding: 12px 10px;
     }
@@ -499,37 +500,55 @@ footer {
     }
 
     .controls-grid {
-        grid-template-columns: 1fr;  
+        grid-template-columns: 1fr;
     }
+
 
     .sensor-grid-vertical {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 25px;
+        gap: 30px;
         width: 100%;
     }
 
     .sensor-card {
         width: 90%;
-        max-width: 300px;
-        height: 400px;
+        max-width: 260px;
+        height: auto;
+        padding: 12px;
+    }
+
+    .sensor-label {
+        font-size: 14px;
+        padding: 4px 10px;
+    }
+
+    .sensor-display {
+        width: 100%;
+        height: 140px;
+        margin-top: 15px;
     }
 
 
     .status-panel {
         width: 100%;
-        max-width: 300px;   
-        margin: 0 auto;     
+        max-width: 300px;
+        margin: 0 auto;
     }
 
     .status-grid {
-        grid-template-columns: 1fr 1fr;  
+        grid-template-columns: 1fr 1fr;
         gap: 10px;
     }
+
+
+
     .control-card {
         width: 100%;
     }
+
+
 
     footer {
         margin-top: 40px;
@@ -542,28 +561,25 @@ footer {
     }
 
     .panel-row {
-       gap: 5px;   
+        gap: 5px;
     }
 
     .control-group {
-       display: flex;
-       flex-direction: column;
-       gap: 10px;
-       margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
     }
 
-    .sensor-card{
-        height: 170px;
-        max-width: none;
-    }
 
     .sensor-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 16px;
     }
 
+
     .graph-grid {
-        grid-template-columns: 1fr;   
+        grid-template-columns: 1fr;
         gap: 16px;
     }
 
@@ -571,33 +587,33 @@ footer {
         width: 75%;
         transform: translateX(-100%);
     }
-
     .graph-panel.open {
         transform: translateX(0);
     }
 
+ 
+
     .notif-panel {
         width: 75%;
-        transform: translateY(-100%); 
+        transform: translateY(-100%);
     }
-
     .notif-panel.open {
         transform: translateY(0);
     }
 
-   .info-panel {
+
+
+    .info-panel {
         width: 90%;
         height: 80%;
         left: 50%;
-        transform: translate(-50%, 100%); 
+        transform: translate(-50%, 100%);
     }
-
     .info-panel.open {
-        transform: translate(-50%, 0); 
+        transform: translate(-50%, 0);
     }
 
     .info-content {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
     }
 }
-
