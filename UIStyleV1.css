@@ -585,6 +585,17 @@ footer {
 
     .controls-grid {
         grid-template-columns: 1fr;
+        display: flex ;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;      
+        gap: 30px;               
+    }
+
+    .control-card {
+        width: 90%;    
+        max-width: 360px;         
+        margin: 0 auto;           
     }
 
 
