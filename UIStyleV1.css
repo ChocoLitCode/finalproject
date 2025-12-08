@@ -29,7 +29,7 @@
 }
 
 .dark-mode .manual-btn {
-    background: #0f0e17;
+    background: #ffffff;
     color: #eae9ff;
     border: 2px solid #eae9ff;
 }
@@ -465,6 +465,16 @@ footer {
 .state-box:hover {
     box-shadow: 0 6px 15px rgba(0,0,0,0.25);
 }
+
+.dark-mode .manual-btn,
+.dark-mode .notif-close,
+.dark-mode .graph-close,
+.dark-mode .info-close {
+    background: #ffffff !important;
+    color: #000000 !important;
+    border: 2px solid #ffffff !important;
+}
+
 
 
 /* RESPONSIVENESS */
