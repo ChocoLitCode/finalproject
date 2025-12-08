@@ -202,9 +202,9 @@ header {
 
 .sensor-card {
     background: var(--sensor-card-bg);
-    width: 160px;
+    width: 220px;
+    height: 220px;
     max-width: 320px;
-    height: 180px;
     padding-top: 10px;
     display: flex;
     flex-direction: column;
@@ -493,9 +493,16 @@ footer {
 }
 
 .sensor-grid-vertical {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-bottom: 40px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
@@ -527,8 +534,9 @@ footer {
 
     .row {
         display: flex;
-        flex-direction: column;  
-        gap: 30px;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
         width: 100%;
     }
 
