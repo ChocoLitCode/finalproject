@@ -104,7 +104,7 @@ void loop() {
 //   startDoor();
 //   startRoomOne();
 //   startRoomTwo();
-    // startRoomThree();
+
 app.loop();
   // Check if authentication is ready
   if (app.ready()){
@@ -123,8 +123,8 @@ app.loop();
       // Update database path for sensor readings
       tempPath = databasePath + "/temperature"; // --> UsersData/<user_uid>/temperature
       humPath = databasePath + "/humidity"; // --> UsersData/<user_uid>/humidity
-      
-      getDHT(&humidity, &temperature);
+          
+      startRoomThree();
         
       Serial.println("Writing to: " + tempPath);
 

@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>ESP32 DHT22 Monitor</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="data:,">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="topnav">
+        <h1>ESP32 DHT22 Temperature & Humidity Monitor</h1>
+    </div>
+
+    <div class="content">
+        <div class="card-grid">
+            <div class="card full-width">
+                <h2>Temperature & Humidity Chart</h2>
+                <canvas id="combinedChart"></canvas>
+            </div>
+
+            <div class="card">
+                <h2>Temperature</h2>
+                <p class="reading"><span id="temperature">0.0</span> &deg;C</p>
+                <div class="last-update">Last updated: <span id="tempTime">--:--:--</span></div>
+            </div>
+
+            <div class="card">
+                <h2>Humidity</h2>
+                <p class="reading"><span id="humidity">0.0</span> %</p>
+                <div class="last-update">Last updated: <span id="humidTime">--:--:--</span></div>
+            </div>
+
+            <div class="card">
+                <h2>Room 1 Light</h2>
+                <p class="reading"><span id="room1Status">OFF</span></p>
+            </div>
+
+            <div class="card">
+                <h2>Room 1 Light Control</h2>
+                <div class="button-group">
+                    <button id="room1On" class="button">ON</button>
+                    <button id="room1Off" class="button">OFF</button>
+                    <button id="room1Auto" class="button">AUTO</button>
+                </div>
+                <p>Current State: <span id="room1State">AUTO</span></p>
+            </div>
+
+            <div class="card">
+                <h2>Room 2 Light</h2>
+                <p class="reading"><span id="room2Status">OFF</span></p>
+            </div>
+
+            <div class="card">
+                <h2>Room 2 Light Control</h2>
+                <div class="button-group">
+                    <button id="room2On" class="button">ON</button>
+                    <button id="room2Off" class="button">OFF</button>
+                    <button id="room2Auto" class="button">AUTO</button>
+                </div>
+                <p>Current State: <span id="room2State">AUTO</span></p>
+            </div>
+
+            <div class="card full-width">
+                <h2>Connection Status</h2>
+                <p class="state">
+                    WebSocket: <span id="wsStatus" class="status-disconnected">Disconnected</span> |
+                    Last Update: <span id="lastUpdateTime">--:--:--</span>
+                </p>
+                <button id="refreshBtn" class="button">Refresh Now</button>
+                <p class="info">Auto updates every 2 seconds</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Alert Panel -->
+    <div id="alertPanel" class="alert-panel hidden" role="status" aria-live="assertive">
+        <div class="alert-content">
+            <p id="alertMessage" class="alert-text">Alert</p>
+            <div class="alert-actions">
+                <button id="dismissAlert" class="button small">Dismiss</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
