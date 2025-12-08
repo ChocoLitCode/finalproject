@@ -71,9 +71,10 @@ if (localStorage.getItem("auth") !== "true") {
     </div>
 
 
-
+    <!-- CURRENT STATUS + MANUAL CONTROLS -->
     <div class="row two-col">
-        <!-- LEFT COLUMN: CURRENT STATUS -->
+
+        <!-- CURRENT STATUS -->
         <div class="column">
             <div class="title">Current Status</div>
 
@@ -93,53 +94,56 @@ if (localStorage.getItem("auth") !== "true") {
             </div>
         </div>
 
-        <!-- RIGHT COLUMN: MANUAL CONTROL -->
+        <!-- MANUAL CONTROL -->
         <div class="column">
             <div class="title">Manual Controls</div>
 
             <div class="controls-grid">
 
-               <div class="control-card grouped-controls">
+                <!-- ROOM 1 -->
+                <div class="control-card grouped-controls">
 
-    <div class="control-title-small">Room 1 Light</div>
+                    <div class="control-title-small">Room 1 Light</div>
 
-    <div class="control-row">
-        <button id="room1On" class="manual-btn">ON</button>
-        <button id="room1Off" class="manual-btn">OFF</button>
-    </div>
+                    <div class="control-row">
+                        <button id="room1On" class="manual-btn">ON</button>
+                        <button id="room1Off" class="manual-btn">OFF</button>
+                    </div>
 
-    <div class="state-section">
-        <span class="state-label">State : <strong id="room1State">Auto</strong></span>
-        <button id="room1Auto" class="manual-btn">AUTO</button>
-    </div>
+            
+                    <div class="state-section">
+                        <span class="state-label">State : <strong id="room1State">Auto</strong></span>
+                        <button id="room1Auto" class="manual-btn">AUTO</button>
+                    </div>
 
-</div>
+                </div>
 
+                <!-- ROOM 2 -->
+                <div class="control-card grouped-controls">
 
-<!-- ROOM 2 -->
-<div class="control-card grouped-controls">
+                    <div class="control-title-small">Room 2 Light</div>
 
-    <div class="control-title-small">Room 2 Light</div>
+                    <div class="control-row">
+                        <button id="room2On" class="manual-btn">ON</button>
+                        <button id="room2Off" class="manual-btn">OFF</button>
+                    </div>
 
-    <div class="control-row">
-        <button id="room2On" class="manual-btn">ON</button>
-        <button id="room2Off" class="manual-btn">OFF</button>
-    </div>
+        
+                    <div class="state-section">
+                        <span class="state-label">State : <strong id="room2State">Auto</strong></span>
+                        <button id="room2Auto" class="manual-btn">AUTO</button>
+                    </div>
 
-    <div class="state-section">
-        <span class="state-label">State : <strong id="room2State">Auto</strong></span>
-        <button id="room2Auto" class="manual-btn">AUTO</button>
-    </div>
-
-</div>
-
+                </div>
 
             </div> 
         </div>
 
-    </div> <!-- end second row -->
+    </div> 
 
 </div>
+
+
 
 <!-- NOTIFICATION SLIDER PANEL -->
 <div id="notifPanel" class="notif-panel">
