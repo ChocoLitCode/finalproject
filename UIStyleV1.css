@@ -30,7 +30,7 @@
 .dark-mode .manual-btn {
     background: #302d47 ;   
     color: #ffffff ;        
-    border: 2px solid #ffffff ;
+    border: 2px solid #1e2a56 ;
 }
 
 .dark-mode .active { background: #1f8a50 }
@@ -40,7 +40,7 @@
 .dark-mode .sensor-label {
     background: #2d2b3d;
     color: #eae9ff;
-    border-color: #eae9ff;
+    border-color: #1e2a56;
 }
 
 body {
@@ -485,6 +485,12 @@ footer {
     }
     .header-title {
         font-size: 18px;
+    }
+
+     .row.two-col {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
     }
 
     .row {

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>IoT Diorama UI</title>
+    <title>IoT Enabled Home Diorama</title>
     <link rel="stylesheet" href="UIStyleV1.css">
 </head>
 
@@ -99,51 +99,40 @@ if (localStorage.getItem("auth") !== "true") {
 
             <div class="controls-grid">
 
-                <!-- ROOM 1 -->
-                <div class="control-card">
+               <div class="control-card grouped-controls">
 
-                    <div class="control-rows">
+    <div class="control-title-small">Room 1 Light</div>
 
-                        <div class="control-row">
-                            <div class="control-label">Room1</div>
-                            <button id="room1On" class="manual-btn">ON</button>
-                        </div>
+    <div class="control-row">
+        <button id="room1On" class="manual-btn">ON</button>
+        <button id="room1Off" class="manual-btn">OFF</button>
+    </div>
 
-                        <div class="control-row">
-                            <div class="control-label">Light</div>
-                            <button id="room1Off" class="manual-btn">OFF</button>
-                        </div>
+    <div class="state-section">
+        <span class="state-label">State : <strong id="room1State">Auto</strong></span>
+        <button id="room1Auto" class="manual-btn">AUTO</button>
+    </div>
 
-                        <div class="control-row">
-                            <div class="control-label">State: <strong id="room1State">Auto</strong></div>
-                            <button id="room1Auto" class="manual-btn">AUTO</button>
-                        </div>
+</div>
 
-                    </div>
-                </div>
 
-                <!-- ROOM 2 -->
-                <div class="control-card">
+<!-- ROOM 2 -->
+<div class="control-card grouped-controls">
 
-                    <div class="control-rows">
+    <div class="control-title-small">Room 2 Light</div>
 
-                        <div class="control-row">
-                            <div class="control-label">Room2</div>
-                            <button id="room2On" class="manual-btn">ON</button>
-                        </div>
+    <div class="control-row">
+        <button id="room2On" class="manual-btn">ON</button>
+        <button id="room2Off" class="manual-btn">OFF</button>
+    </div>
 
-                        <div class="control-row">
-                            <div class="control-label">Light</div>
-                            <button id="room2Off" class="manual-btn">OFF</button>
-                        </div>
+    <div class="state-section">
+        <span class="state-label">State : <strong id="room2State">Auto</strong></span>
+        <button id="room2Auto" class="manual-btn">AUTO</button>
+    </div>
 
-                        <div class="control-row">
-                            <div class="control-label">State: <strong id="room2State">Auto</strong></div>
-                            <button id="room2Auto" class="manual-btn">AUTO</button>
-                        </div>
+</div>
 
-                    </div>
-                </div>
 
             </div> 
         </div>
