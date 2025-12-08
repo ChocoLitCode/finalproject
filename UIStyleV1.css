@@ -37,8 +37,7 @@
 .dark-mode .active { background: #1f8a50 }
 .dark-mode .inactive { background: #99352a }
 
-.dark-mode .control-title,
-.dark-mode .sensor-label {
+.dark-mode .control-title{
     background: #2d2b3d;
     color: #eae9ff;
     border-color: #1e2a56;
@@ -253,7 +252,7 @@ header {
 }
 
 .control-row {
-    display: grid;
+    display: grid ;
     grid-template-columns: 1fr 1fr;
     gap: 15px;
     width: 100% ;
@@ -303,9 +302,12 @@ header {
 
 .sensor-label {
     background: var(--card-bg);
-    padding: 5px 12px;
+    color: var(--text);
     border: 2px solid var(--text);
-    border-radius: 12px;
+    border-radius: 20px;
+    padding: 6px 18px;
+    font-weight: bold;
+    text-align: center;
 }
 
 .sensor-display {
