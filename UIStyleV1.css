@@ -27,11 +27,10 @@
     --sensor-bg: #14131b;
     --sensor-card-bg: #2d2b3d;
 }
-
 .dark-mode .manual-btn {
-    background: #0f0e17;
-    color: #eae9ff;
-    border: 2px solid #eae9ff;
+    background: #ffffff ;   
+    color: #000000 ;        
+    border: 2px solid #ffffff ;
 }
 
 .dark-mode .active { background: #1f8a50 }
@@ -111,14 +110,12 @@ header {
     width: fit-content;
 }
 
-/* LAYOUT */
 .container {
     width: 92%;
     margin-top: 30px;
     flex: 1;
 }
 
-/* Default row (for SENSOR CARDS) */
 .row {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -126,9 +123,6 @@ header {
     align-items: start;
 }
 
-/* ------------------------------
-   FIXED TWO-COLUMN LAYOUT
-   ------------------------------ */
 .row.two-col {
     display: flex;
     justify-content: center;
@@ -143,7 +137,7 @@ header {
     align-items: center;
 }
 
-/* STATUS PANEL — FIXED WIDTH */
+/* STATUS PANEL */
 .status-panel {
     width: 420px;
     max-width: 420px;
@@ -168,7 +162,7 @@ header {
 .active { background: #b7ffb7; }
 .inactive { background: #ffb7b7; }
 
-/* MANUAL CONTROL — FIX NON-STRETCH */
+/* MANUAL CONTROL */
 .control-card {
     width: 340px;
     max-width: 340px;
@@ -178,7 +172,6 @@ header {
     border-radius: 18px;
 }
 
-/* Wrap for both control cards */
 .controls-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -506,13 +499,34 @@ footer {
     }
 
     .controls-grid {
-        grid-template-columns: 1fr;  /* 1 column on mobile */
+        grid-template-columns: 1fr;  
     }
 
     .sensor-grid-vertical {
-        grid-template-columns: 1fr; /* stack sensors */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        width: 100%;
     }
 
+    .sensor-card {
+        width: 90%;
+        max-width: 300px;
+        height: 200px;
+    }
+
+
+    .status-panel {
+        width: 100%;
+        max-width: 350px;   
+        margin: 0 auto;     
+    }
+
+    .status-grid {
+        grid-template-columns: 1fr 1fr;  
+        gap: 10px;
+    }
     .control-card {
         width: 100%;
     }
