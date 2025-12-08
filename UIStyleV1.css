@@ -131,7 +131,7 @@ header {
 }
 /* STATUS PANEL */
 .status-panel {
-    max-width: 300px;
+    max-width: 380px;
     padding: 25px;
 }
 
@@ -488,8 +488,8 @@ footer {
     grid-template-columns: 1fr 1fr;
     gap: 25px;
     width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
+    max-width: 800px;
+    margin-left: -20px;
 }
 
 .sensor-grid-vertical {
