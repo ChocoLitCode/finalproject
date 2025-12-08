@@ -587,14 +587,14 @@ footer {
         grid-template-columns: 1fr;
         display: flex ;
         flex-direction: column;
-        width: 100%;
+        width: 90%;
         align-items: center;      
         gap: 30px;               
     }
 
     .control-card {
         width: 90%;    
-        max-width: 360px;         
+        max-width: 320px;         
         margin: 0 auto;           
     }
 
