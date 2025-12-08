@@ -29,7 +29,7 @@
 }
 
 .dark-mode .manual-btn {
-    background: #ffffff;
+    background: #0f0e17;
     color: #eae9ff;
     border: 2px solid #eae9ff;
 }
@@ -328,7 +328,7 @@ footer {
 .notif-close {
     width: 28px;
     height: 28px;
-    background: var(--card-bg);
+    background: #ffffff;
     border: 2px solid var(--text);
     border-radius: 10px;
     cursor: pointer;
@@ -368,7 +368,7 @@ footer {
     position: absolute;
     top: 6px;
     right: 12px;
-    background: var(--card-bg);
+    background: #ffffff;
     border: 2px solid var(--text);
     border-radius: 10px;
     padding: 3px 10px;
