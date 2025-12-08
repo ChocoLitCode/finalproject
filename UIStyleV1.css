@@ -403,7 +403,7 @@ footer {
 /* INFO PANEL */
 .info-btn {
     margin-top: 20px;
-    background: #ffffff;
+    background: var(--card-bg);
     color: var(--text);
     border: 2px solid var(--text);
     border-radius: 12px;
