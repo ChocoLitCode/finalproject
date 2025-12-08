@@ -506,10 +506,45 @@ footer {
 }
 
 .row.two-col {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    width: 100%;
+}
+
+.status-panel {
+    width: 420px;      
+    max-width: 420px;
+}
+
+
+.controls-grid {
     display: grid;
-    grid-template-columns: 0.7fr 1.3fr;
-    gap: 40px;
-    align-items: start;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    width: auto;          
+    max-width: none;       
+    margin: 0 auto;        
+}
+
+
+.control-card {
+    width: 340px;      
+    max-width: 340px;
+}
+
+
+.sensor-grid-vertical {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* HOVER */
