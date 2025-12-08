@@ -22,15 +22,16 @@
     --panel:#2d2b3d;
     --title: #302d47;
     --header: #26233a;
-    --text: #eae9ff;
     --card-bg:#0f0e17;
     --sensor-bg: #14131b;
     --sensor-card-bg: #2d2b3d;
+    --text: #b8c2ff;
+    --border-dark: #1e2a56;
 }
 .dark-mode .manual-btn {
     background: #302d47 ;   
     color: #ffffff ;        
-    border: 2px solid #1e2a56 ;
+    border: 2px solid #000 ;
 }
 
 .dark-mode .active { background: #1f8a50 }
@@ -41,6 +42,16 @@
     background: #2d2b3d;
     color: #eae9ff;
     border-color: #1e2a56;
+}
+
+.dark-mode .sensor-card,
+.dark-mode .status-panel,
+.dark-mode .control-card,
+.dark-mode .sensor-display,
+.dark-mode .state-box,
+.dark-mode .title,
+.dark-mode .control-title-small {
+    border-color: var(--border-dark);
 }
 
 body {
@@ -201,6 +212,35 @@ header {
     border-radius: 12px;
     text-align: center;
     font-weight: bold;
+}
+
+.grouped-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.control-title-small {
+    background: var(--card-bg);
+    border: 2px solid var(--text);
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto 10px auto;
+}
+
+.control-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.state-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .manual-btn {
@@ -474,6 +514,8 @@ footer {
 .state-box:hover {
     box-shadow: 0 6px 15px rgba(0,0,0,0.25);
 }
+
+
 
 
 
