@@ -248,7 +248,7 @@ header {
 
 .sensor-display {
     width: 85%;
-    height: 100px;
+    height: 150px;
     margin-top: 20px;
     background: var(--sensor-bg);
     border-radius: 12px;
@@ -413,6 +413,21 @@ footer {
     cursor: pointer;
 }
 
+.info-close {
+    width: 28px;
+    height: 28px;
+    background: #ffffff ; 
+    color: #000000;        
+    border: 2px solid var(--text);
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .info-panel {
     position: fixed;
     bottom: 0;
@@ -433,6 +448,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-weight: bold;
     background: var(--header);
     border: 2px solid var(--text);
     border-radius: 12px;
@@ -464,15 +480,6 @@ footer {
 .sensor-card:hover,
 .state-box:hover {
     box-shadow: 0 6px 15px rgba(0,0,0,0.25);
-}
-
-.dark-mode .manual-btn,
-.dark-mode .notif-close,
-.dark-mode .graph-close,
-.dark-mode .info-close {
-    background: #ffffff !important;
-    color: #000000 !important;
-    border: 2px solid #ffffff !important;
 }
 
 
