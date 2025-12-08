@@ -49,7 +49,6 @@
 .dark-mode .control-card,
 .dark-mode .sensor-display,
 .dark-mode .state-box,
-.dark-mode .title,
 .dark-mode .control-title-small {
     border-color: var(--border-dark);
 }
@@ -251,6 +250,36 @@ header {
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
+}
+
+.control-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    width: 100% ;
+}
+
+.manual-btn {
+    width: 100%; 
+    padding: 12px 0 ;
+}
+
+
+.state-section {
+    display: grid ;
+    grid-template-columns: 1fr 1fr ;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.state-label {
+    justify-self: start;
+}
+
+
+.control-title-small {
+    margin: 0 auto 10px auto ;
 }
 
 /* SENSOR GRID */
