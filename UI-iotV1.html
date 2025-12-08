@@ -29,10 +29,51 @@ if (localStorage.getItem("auth") !== "true") {
 <!-- MAIN CONTENT -->
 <div class="container">
 
-    <!-- NEW 3-COLUMN LAYOUT -->
-    <div class="row">
+    <!-- NEW LAYOUT: SENSORS ON TOP -->
+    <div class="row" style="grid-template-columns: 1fr;">
+        <div class="column">
+            <div class="title">Sensor Readings</div>
 
-        <!-- COLUMN 1: CURRENT STATUS -->
+            <div class="sensor-grid-vertical">
+                <!-- HUMIDITY -->
+                <div class="sensor-card">
+                    <div class="sensor-label">Humidity</div>
+                    <div class="sensor-display">
+                        <p style="margin:0; font-weight:bold;">
+                            <span id="humidity">0.0</span> %
+                        </p>
+                        <div style="font-size:12px; margin-top:8px;">
+                            Last: <span id="humidTime">--:--:--</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TEMPERATURE -->
+                <div class="sensor-card">
+                    <div class="sensor-label">Temperature</div>
+                    <div class="sensor-display">
+                        <p style="margin:0; font-weight:bold;">
+                            <span id="temperature">0.0</span> °C
+                        </p>
+                        <div style="font-size:12px; margin-top:8px;">
+                            Last: <span id="tempTime">--:--:--</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SOUND -->
+                <div class="sensor-card">
+                    <div class="sensor-label">Sound</div>
+                    <div class="sensor-display"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECOND ROW: STATUS + CONTROLS -->
+    <div class="row" style="grid-template-columns: 1fr 1fr;">
+
+        <!-- LEFT COLUMN: CURRENT STATUS -->
         <div class="column">
             <div class="title">Current Status</div>
 
@@ -52,9 +93,8 @@ if (localStorage.getItem("auth") !== "true") {
             </div>
         </div>
 
-        <!-- COLUMN 2: MANUAL CONTROL -->
+        <!-- RIGHT COLUMN: MANUAL CONTROL -->
         <div class="column">
-
             <div class="title">Manual Controls</div>
 
             <div class="controls-grid">
@@ -108,48 +148,7 @@ if (localStorage.getItem("auth") !== "true") {
             </div> 
         </div>
 
-        <!-- COLUMN 3: SENSOR READINGS -->
-        <div class="column">
-            <div class="title">Sensor Readings</div>
-
-            <div class="sensor-grid-vertical">
-
-                <!-- HUMIDITY -->
-                <div class="sensor-card">
-                    <div class="sensor-label">Humidity</div>
-                    <div class="sensor-display">
-                        <p style="margin:0; font-weight:bold;">
-                            <span id="humidity">0.0</span> %
-                        </p>
-                        <div style="font-size:12px; margin-top:8px;">
-                            Last: <span id="humidTime">--:--:--</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- TEMPERATURE -->
-                <div class="sensor-card">
-                    <div class="sensor-label">Temperature</div>
-                    <div class="sensor-display">
-                        <p style="margin:0; font-weight:bold;">
-                            <span id="temperature">0.0</span> °C
-                        </p>
-                        <div style="font-size:12px; margin-top:8px;">
-                            Last: <span id="tempTime">--:--:--</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- SOUND -->
-                <div class="sensor-card">
-                    <div class="sensor-label">Sound</div>
-                    <div class="sensor-display"></div>
-                </div>
-
-            </div>
-        </div>
-
-    </div> 
+    </div> <!-- end second row -->
 
 </div>
 
