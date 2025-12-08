@@ -505,6 +505,12 @@ footer {
     align-items: center;
 }
 
+.row.two-col {
+    display: grid;
+    grid-template-columns: 0.7fr 1.3fr;
+    gap: 40px;
+    align-items: start;
+}
 
 /* HOVER */
 .title:hover,
