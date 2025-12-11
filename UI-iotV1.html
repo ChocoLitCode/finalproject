@@ -4,15 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>IoT Enabled Home Diorama</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" defer></script>
-</head>
-<script>
+    <link rel="stylesheet" href="UIStyleV1.css">
+    <script>
 /* authentication redirect */
 if (localStorage.getItem("auth") !== "true") {
     window.location.href = "login.html";
 }
 </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" defer></script>
+</head>
+
 <body>
 
 <header>
@@ -214,6 +215,6 @@ if (localStorage.getItem("auth") !== "true") {
     </div>
 </footer>
 
-<script src="script.js"></script>
+<script src="UIScriptV1.js"></script>
 </body>
 </html>
