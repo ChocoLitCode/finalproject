@@ -111,13 +111,15 @@ header {
 /* TITLES */
 .title {
     background: var(--title);
-    padding: 6px 18px;
-    margin-bottom: 15px;
+    padding: 10px 26px;
+    margin-bottom: 20px;
     border-radius: 30px;
     border: 2px solid var(--text);
-    font-size: 17px;
+    font-size: 22px;
+    font-weight: 900;
     text-align: center;
     width: fit-content;
+    letter-spacing: 0.5px;
 }
 
 .container {
@@ -828,6 +830,25 @@ footer {
     .graph-grid {
         grid-template-columns: 1fr;
         gap: 16px;
+    }
+
+    .graph-box {
+        height: 180px ;      
+        padding: 10px ;
+    }
+
+    .graph-box canvas {
+        max-height: 130px ;  
+    }
+
+    .graph-box-title {
+        font-size: 14px ;  
+        padding: 6px ;
+    }
+
+    .graph-panel {
+        width: 90% ;         
+        padding: 15px ;
     }
 
     .graph-panel {
