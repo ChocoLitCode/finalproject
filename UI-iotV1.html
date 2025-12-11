@@ -4,15 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>IoT Enabled Home Diorama</title>
-    <link rel="stylesheet" href="UIStyleV1.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" defer></script>
 </head>
-
-<script>
-/* authentication redirect */
-if (localStorage.getItem("auth") !== "true") {
-    window.location.href = "authentication.html";
-}
-</script>
 
 <body>
 
@@ -20,16 +14,16 @@ if (localStorage.getItem("auth") !== "true") {
     <div class="header-title">IoT Enabled Home Diorama</div>
 
     <div class="header-right">
-        <img id="graphToggle" class="header-btn" src="assets/graph-icon.svg" alt="graph">
-        <img id="darkToggle" class="header-btn" src="assets/dark-icon.svg" alt="dark mode">
-        <img id="notifToggle" class="header-btn" src="assets/notif-icon.svg" alt="notifications">
+        <img id="graphToggle" class="header-btn" src="/assets/graph-icon.svg" alt="graph">
+        <img id="darkToggle" class="header-btn" src="/assets/dark-icon.svg" alt="dark mode">
+        <img id="notifToggle" class="header-btn" src="/assets/notif-icon.svg" alt="notifications">
     </div>
 </header>
 
 <!-- MAIN CONTENT -->
 <div class="container">
 
-    <!-- NEW LAYOUT: SENSORS ON TOP -->
+    <!-- SENSOR READINGS ON TOP -->
     <div class="row" style="grid-template-columns: 1fr;">
         <div class="column">
             <div class="title">Sensor Readings</div>
@@ -39,7 +33,7 @@ if (localStorage.getItem("auth") !== "true") {
                 <div class="sensor-card">
                     <div class="sensor-label">Humidity</div>
                     <div class="sensor-display">
-                        <p style="margin:0; font-weight:bold;">
+                        <p style="margin:0; font-weight:bold; padding-top: 35px; font-size: 24px;">
                             <span id="humidity">0.0</span> %
                         </p>
                         <div style="font-size:12px; margin-top:8px;">
@@ -52,8 +46,8 @@ if (localStorage.getItem("auth") !== "true") {
                 <div class="sensor-card">
                     <div class="sensor-label">Temperature</div>
                     <div class="sensor-display">
-                        <p style="margin:0; font-weight:bold;">
-                            <span id="temperature">0.0</span> °C
+                        <p style="margin:0; font-weight:bold; padding-top: 35px; font-size: 24px;">
+                            <span id="temperature">0.0</span> Â°C
                         </p>
                         <div style="font-size:12px; margin-top:8px;">
                             Last: <span id="tempTime">--:--:--</span>
@@ -64,7 +58,14 @@ if (localStorage.getItem("auth") !== "true") {
                 <!-- SOUND -->
                 <div class="sensor-card">
                     <div class="sensor-label">Sound</div>
-                    <div class="sensor-display"></div>
+                    <div class="sensor-display">
+                        <div style="margin-top: 40px;">
+                            <div id="soundBadge" class="sound-badge listening">Listening</div>
+                        </div>
+                        <div style="font-size:12px; margin-top:15px;">
+                            Last: <span id="soundTime">--:--:--</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -88,7 +89,7 @@ if (localStorage.getItem("auth") !== "true") {
                     <div class="state-box inactive" id="light1State">Inactive</div>
 
                     <div class="state-box">Light 2</div>
-                    <div class="state-box active" id="light2State">Active</div>
+                    <div class="state-box inactive" id="light2State">Inactive</div>
 
                 </div>
             </div>
@@ -149,14 +150,17 @@ if (localStorage.getItem("auth") !== "true") {
 <div id="notifPanel" class="notif-panel">
     <div class="notif-header">
         <h2>Notifications</h2>
-        <button id="notifClose" class="notif-close">X</button>
+        <div>
+            <button id="clearNotif" class="notif-clear">Clear</button>
+            <button id="notifClose" class="notif-close">X</button>
+        </div>
     </div>
     <div class="notif-content">
         <div class="notif-item">No new notifications.</div>
     </div>
 </div>
 
-<!-- GRAPH SLIDER PANEL -->
+<!-- GRAPH SLIDER PANEL WITH CHARTS -->
 <div id="graphPanel" class="graph-panel">
     <div class="graph-title">
         Graph & History
@@ -164,12 +168,25 @@ if (localStorage.getItem("auth") !== "true") {
     </div>
 
     <div class="graph-grid">
-        <div class="graph-box"><div class="graph-box-title">Humidity</div></div>
-        <div class="graph-box"><div class="graph-box-title">Temperature</div></div>
-        <div class="graph-box"><div class="graph-box-title">Sound</div></div>
-        <div class="graph-box"><div class="graph-box-title">Light</div></div>
+        <div class="graph-box">
+            <div class="graph-box-title">Humidity History</div>
+            <canvas id="humidityChart"></canvas>
+        </div>
+        <div class="graph-box">
+            <div class="graph-box-title">Temperature History</div>
+            <canvas id="temperatureChart"></canvas>
+        </div>
+        <div class="graph-box">
+            <div class="graph-box-title">Combined View</div>
+            <canvas id="combinedChart"></canvas>
+        </div>
+        <div class="graph-box">
+            <div class="graph-box-title">24 Hour Trend</div>
+            <canvas id="trendChart"></canvas>
+        </div>
     </div>
 </div>
+
 
 <!-- FOOTER -->
 <footer>
@@ -192,6 +209,6 @@ if (localStorage.getItem("auth") !== "true") {
     </div>
 </footer>
 
-<script src="UIScriptV1.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
