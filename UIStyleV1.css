@@ -791,8 +791,8 @@ footer {
     }
 
     .control-card {
-        width: 90%;
-        max-width: 250px;
+        width: 250;
+        max-width: 300px;
         margin: 0 auto;
     }
 
