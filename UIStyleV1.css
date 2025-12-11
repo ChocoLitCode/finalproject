@@ -297,6 +297,11 @@ header {
     background: var(--sensor-bg);
     border-radius: 12px;
     border: 2px solid var(--text);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 /* ALERT PANEL */
@@ -410,6 +415,11 @@ footer {
 
 .dark-mode .notif-success {
     border-left-color: #69f0ae;
+}
+
+.notif-close {
+    background: #ffffff;
+    color: #000;
 }
 
 /* Clear button in notification header */
@@ -754,9 +764,18 @@ footer {
 
     .row.two-col {
         flex-direction: column;
-        gap: 40px;
-        align-items: center;
+        align-items: center;     
+        justify-content: center;
+        width: 100%;
     }
+
+    .row.two-col .column {
+        width: 100%;             
+        display: flex;
+        flex-direction: column;
+        align-items: center;      
+    }   
+
 
     .row {
         display: flex;
