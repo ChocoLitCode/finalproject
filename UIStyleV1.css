@@ -414,7 +414,7 @@ footer {
 
 /* Clear button in notification header */
 #clearNotif {
-    background: var(--card-bg);
+    background: #ffffff;
     border: 2px solid var(--text);
     border-radius: 8px;
     padding: 4px 10px;
@@ -448,7 +448,7 @@ footer {
     position: fixed;
     top: 0;
     left: 0;
-    width: 60%;
+    width: 75%;
     max-width: 600px;
     height: 100%;
     background: var(--panel);
@@ -767,7 +767,18 @@ footer {
     }
 
     .column {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center ;
         width: 100%;
+    }
+
+    .status-panel,
+    .control-card,
+    .controls-grid {
+        margin-left: auto ;
+        margin-right: auto ;
     }
 
     .controls-grid {
