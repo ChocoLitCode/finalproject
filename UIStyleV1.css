@@ -420,6 +420,7 @@ footer {
 .notif-close {
     background: #ffffff;
     color: #000;
+    border-radius: 5px;
 }
 
 /* Clear button in notification header */
@@ -774,6 +775,7 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;      
+        justify-content: center;
     }   
 
 
@@ -810,7 +812,7 @@ footer {
     }
 
     .control-card {
-        width: 250;
+        width: 250px;
         max-width: 300px;
         margin: 0 auto;
     }
@@ -845,6 +847,8 @@ footer {
         width: 90%;
         max-width: 300px;
         margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .status-grid {
