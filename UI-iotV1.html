@@ -7,7 +7,12 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" defer></script>
 </head>
-
+<script>
+/* authentication redirect */
+if (localStorage.getItem("auth") !== "true") {
+    window.location.href = "authentication.html";
+}
+</script>
 <body>
 
 <header>
