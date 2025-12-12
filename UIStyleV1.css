@@ -460,7 +460,7 @@ footer {
     top: 0;
     left: 0;
     width: 80%;
-    max-width: 600px;
+    max-width: 900px;
     height: 100%;
     background: var(--panel);
     border-right: 3px solid var(--text);
@@ -893,6 +893,7 @@ footer {
     .status-grid .state-box{
         max-width: 300px;
         width: 90%;
+        gap: 10px;
     }
 
     footer {
