@@ -778,6 +778,16 @@ footer {
         justify-content: center;
     }   
 
+    .container .status-panel,
+    .row .status-panel,
+    .column .status-panel {
+        width: 90%;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+    }
+
 
     .row {
         display: flex;
