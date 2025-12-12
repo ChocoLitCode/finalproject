@@ -875,8 +875,13 @@ footer {
     }
 
     .status-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
+        justify-items: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .status-grid .state-box{
+        margin: 0 auto ;
     }
 
     footer {
