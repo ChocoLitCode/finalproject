@@ -7,6 +7,10 @@
 
 <link rel="stylesheet" href="UIStyleV1.css">
 
+<div class="logo-wrap">
+  <img src="assets/logo.png" alt="IoT Diorama logo" class="logo-img">
+</div>
+
 <style>
 @font-face {
     font-family: 'ShareTech';
@@ -92,6 +96,25 @@ body {
     height: 20px;
 
 }
+
+.logo-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.logo-img {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  border-radius: 12px;          
+  background: white;            
+  padding: 6px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  border: 2px solid rgba(0,0,0,0.06);
+}
+
+
 @media (max-width: 600px) {
 
     body {
@@ -120,6 +143,13 @@ body {
         width: 100%;
         padding: 12px;
         font-size: 15px;
+    }
+
+    .logo-img { 
+        width: 72px; height: 72px; 
+    }
+    .logo-wrap { 
+        margin-bottom: 10px;
     }
 }
 
