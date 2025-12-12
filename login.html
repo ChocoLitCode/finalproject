@@ -1,181 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Login - IoT Enabled Home Diorama</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - IoT Enabled Home Diorama</title>
 
-<link rel="stylesheet" href="UIStyleV1.css">
+  <link rel="stylesheet" href="UIStyleV1.css" />
 
-<div class="logo-wrap">
-  <img src="assets/logo.png" alt="IoT Diorama logo" class="logo-img">
-</div>
-
-<style>
-@font-face {
-    font-family: 'ShareTech';
-    src: url('assets/ShareTech-Regular.ttf') format('truetype');
-}
-
-/* PANEL STYLING */
-:root {
-    --bg: #f2f3ff;
-    --panel: #cdcaff;
-    --card-bg: #fff;
-    --text: #000;
-    --border: #000;
-}
-
-
-body {
-    background: var(--bg);
-    font-family: 'ShareTech';
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.login-container {
-    height: 280px;
-    width: 320px;
-    background: var(--panel);
-    padding: 24px 26px;
-    border: 3px solid var(--text);
-    border-radius: 16px;
-    text-align: center;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-}
-
-
-
-.input-box {
-    background: var(--card-bg);
-    border: 2px solid var(--text);
-    border-radius: 12px;
-    padding: 12px 14px;
-    width: 82%;
-    margin: 12px auto;
-    font-size: 15px;
-    text-align: center;
-}
-
-/* LOGIN  */
-.login-btn {
-    margin-top: 20px;
-    background: var(--card-bg);
-    color: var(--text);
-    border: 2px solid var(--text);
-    border-radius: 12px;
-    padding: 12px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.login-btn:hover {
-    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
-}
-
-/* ERROR MESSAGE */
-.error {
-    color: red;
-    margin-top: 10px;
-    height: 20px;
-
-}
-
-.logo-wrap {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.logo-img {
-  width: 400px;
-  height: 400px;
-  object-fit: contain;
-  border-radius: 20px;          
-  background: white;            
-  padding: 10px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  border: 2px solid rgba(0,0,0,0.06);
-}
-
-
-@media (max-width: 600px) {
-
-    body {
-        padding: 0 15px;
+  <style>
+    @font-face {
+      font-family: 'ShareTech';
+      src: url('assets/ShareTech-Regular.ttf') format('truetype');
     }
 
-    .login-container {
+    :root{
+      --bg: #f2f3ff;
+      --panel: #cdcaff;
+      --card-bg: #fff;
+      --text: #000;
+      --border: #000;
+    }
+
+    body{
+      background: var(--bg);
+      font-family: 'ShareTech', sans-serif;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .logo-wrap{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+      width: 100%;
+      max-width: 760px;
+    }
+
+    .logo-img{
+      width: 400px;
+      height: 400px;
+      object-fit: contain;
+      border-radius: 20px;
+      background: white;
+      padding: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      border: 2px solid rgba(0,0,0,0.06);
+    }
+
+    .login-container{
+      height: 280px;
+      width: 320px;
+      background: var(--panel);
+      padding: 24px 26px;
+      border: 3px solid var(--text);
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .input-box{
+      background: var(--card-bg);
+      border: 2px solid var(--text);
+      border-radius: 12px;
+      padding: 12px 14px;
+      width: 82%;
+      margin: 0 auto;
+      font-size: 15px;
+      text-align: center;
+    }
+
+    .login-btn{
+      margin-top: 6px;
+      background: var(--card-bg);
+      color: var(--text);
+      border: 2px solid var(--text);
+      border-radius: 12px;
+      padding: 12px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .login-btn:hover{
+      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    }
+
+    .error{
+      color: red;
+      margin-top: 6px;
+      height: 20px;
+      font-size: 14px;
+    }
+
+    @media (max-width:600px){
+      .logo-img{
+        width: 120px;
+        height: 120px;
+      }
+
+      .login-container{
         width: 90%;
-        max-width: 300px; 
-        padding: 30px 20px; 
-    }
+        max-width: 300px;
+        padding: 20px;
+        height: auto;
+      }
 
-    .system-title {
-        font-size: 14px;
-        padding: 8px 16px;
-        margin-bottom: 20px;
-    }
-
-    .input-box {
+      .input-box{
         width: 70%;
         font-size: 14px;
         padding: 12px;
-    }
+      }
 
-    .login-btn {
+      .login-btn{
         width: 100%;
         padding: 12px;
         font-size: 15px;
+      }
     }
-
-    .logo-img { 
-        width: 120px; height: 120x; 
-    }
-    .logo-wrap { 
-        margin-bottom: 10px;
-    }
-}
-
-</style>
-
+  </style>
 </head>
 <body>
+  <div class="logo-wrap">
+    <img src="assets/logo.png" alt="IoT Diorama logo" class="logo-img">
 
-<div class="login-container">
-  <img class="logo-img" src="assets/logo.png" alt="IoT Diorama logo">
-    <div class="login-container"></div>
-    <input id="user" class="input-box" placeholder="USERNAME">
-    <input id="pass" type="password" class="input-box" placeholder="PASSWORD">
+    <div class="login-container">
+      <input id="user" class="input-box" placeholder="USERNAME" />
+      <input id="pass" type="password" class="input-box" placeholder="PASSWORD" />
 
-    <button class="login-btn" onclick="login()">Login</button>
+      <button class="login-btn" onclick="login()">Login</button>
 
-    <div id="error" class="error"></div>
-</div>
-</div>
+      <div id="error" class="error"></div>
+    </div>
+  </div>
 
-<script>
-const USERNAME = "admin";
-const PASSWORD = "1234";
+  <script>
+    const USERNAME = "admin";
+    const PASSWORD = "1234";
 
-function login() {
-    let u = document.getElementById("user").value.trim();
-    let p = document.getElementById("pass").value.trim();
+    function login(){
+      const u = document.getElementById("user").value.trim();
+      const p = document.getElementById("pass").value.trim();
 
-    if (u === USERNAME && p === PASSWORD) {
+      if (u === USERNAME && p === PASSWORD){
         localStorage.setItem("auth", "true");
-        window.location.href = "UI-iotV1.html"; 
-    } else {
+        window.location.href = "UI-iotV1.html";
+      } else {
         document.getElementById("error").innerText = "Invalid username or password";
+      }
     }
-}
-</script>
-
+  </script>
 </body>
 </html>
