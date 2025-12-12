@@ -796,7 +796,6 @@ footer {
     }
 
     .status-panel,
-    .control-card,
     .controls-grid {
         margin-left: auto ;
         margin-right: auto ;
@@ -809,12 +808,15 @@ footer {
         width: 80%;
         align-items: center;
         gap: 30px;
+        justify-content: end;
+        justify-items: center;
     }
 
     .control-card {
         width: 250px;
         max-width: 300px;
         margin: 0 auto;
+        margin-left: 30px;
     }
 
     .sensor-grid-vertical {
@@ -911,77 +913,5 @@ footer {
     .info-content {
         grid-template-columns: 1fr;
     }
-
-      .panels, .panel-row, .dashboard-grid, .cards-row, .controls-wrapper {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 14px !important;
-    align-items: center !important;
-    width: 100% !important;
-    padding: 0 !important;
-    box-sizing: border-box !important;
-  }
-
-  /* Generic card/panel sizing and centering */
-  .panel, .card, .status-panel, .control-panel, .current-status, .sensor-panel {
-    float: none !important;
-    clear: both !important;
-    width: 100% !important;
-    max-width: 420px !important;
-    margin: 0 auto !important;
-    box-sizing: border-box !important;
-  }
-
-  /* Manual Control specific: stack rooms and center controls */
-  .manual-control, .manual-controls, .control-panel .rooms, .rooms {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 10px !important;
-    align-items: center !important;
-    width: 100% !important;
-    margin: 0 auto !important;
-  }
-
-  .manual-control .room, .room {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    width: 100% !important;
-    max-width: 360px !important;
-    margin: 0 auto !important;
-  }
-
-  /* center the buttons/toggles inside each room */
-  .manual-control .room .controls,
-  .room .controls,
-  .room .buttons,
-  .manual-control .controls {
-    display: flex !important;
-    justify-content: center !important;
-    gap: 10px !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
-  }
-
-  /* Defensive overrides for leftover floats/inline-blocks/margins */
-  .manual-control .room, .room, .control-panel, .panel, .card {
-    float: none !important;
-    clear: both !important;
-  }
-  .manual-control input, .manual-control button, .room button {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-  }
-  .manual-control .item, .room .item {
-    display: block !important;
-    text-align: center !important;
-    width: 100% !important;
-  }
-
-  /* Ensure Current Status remains centered */
-  .current-status, .status-panel {
-    text-align: center !important;
-    margin: 0 auto !important;
-  }
     
 }
