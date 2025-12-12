@@ -50,17 +50,6 @@ body {
 }
 
 
-.system-title {
-    background: var(--card-bg);
-    display: inline-block;
-    border: 2px solid var(--text);
-    border-radius: 12px;
-    padding: 8px 16px;
-    margin-bottom: 18px;
-    font-size: 15px;
-    font-weight: bold;
-}
-
 
 .input-box {
     background: var(--card-bg);
@@ -105,8 +94,8 @@ body {
 }
 
 .logo-img {
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
   object-fit: contain;
   border-radius: 20px;          
   background: white;            
@@ -160,16 +149,15 @@ body {
 <body>
 
 <div class="login-container">
-
-    <div class="system-title">IOT Diorama Monitoring System</div>
-
+  <img class="logo-img" src="assets/logo.png" alt="IoT Diorama logo">
+    <div class="login-container"></div>
     <input id="user" class="input-box" placeholder="USERNAME">
     <input id="pass" type="password" class="input-box" placeholder="PASSWORD">
 
     <button class="login-btn" onclick="login()">Login</button>
 
     <div id="error" class="error"></div>
-  
+</div>
 </div>
 
 <script>
