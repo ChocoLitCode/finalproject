@@ -911,4 +911,50 @@ footer {
     .info-content {
         grid-template-columns: 1fr;
     }
+      .panels, .panel-row, .dashboard-grid, .cards-row {
+    display: flex;
+    flex-direction: column ;
+    gap: 14px;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+  }
+
+  .panel, .card, .status-panel, .control-panel, .current-status, .sensor-panel {
+    width: 100% ;
+    max-width: 420px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+
+  .manual-control, .manual-control .rooms, .rooms {
+    display: flex ;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+  }
+
+  
+  .manual-control .room .controls,
+  .room .buttons,
+  .room .controls {
+    display: flex ;
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+  }
+
+
+  .current-status, .status-panel {
+    text-align: center;
+  }
+
+  
+  .panel, .card, .status-panel, .control-panel, .room {
+    float: none ;
+    clear: both ;
+    width: auto ;
+  }
 }
