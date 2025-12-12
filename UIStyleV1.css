@@ -248,6 +248,8 @@ header {
     height: 44px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .manual-btn {
@@ -527,16 +529,6 @@ footer {
 }
 
 
-/* Dark mode adjustments */
-.dark-mode .wifi-form input {
-    background: var(--sensor-bg);
-    color: var(--text);
-}
-
-.dark-mode .wifi-close {
-    background: #ffffff;
-    color: #000000;
-}
 
 /* INFO PANEL */
 .info-btn {
