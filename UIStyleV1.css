@@ -323,6 +323,13 @@ header {
     text-align: center;
 }
 
+.sensor-grid-vertical {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
 /* ALERT PANEL */
 .alert-panel {
     padding: 20px;
