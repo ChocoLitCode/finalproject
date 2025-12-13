@@ -456,6 +456,34 @@ function setControlsEnabled(enabled) {
     });
 }
 
+// Toggle visual mode (Auto/Manual) for a room
+function setRoomMode(roomNumber, mode) {
+    const btn = document.getElementById(`room${roomNumber}Auto`);
+    const stateEl = document.getElementById(`room${roomNumber}State`);
+    const card = btn ? btn.closest('.control-card') : null;
+    if (!btn || !stateEl) return;
+
+    const m = String(mode ?? '').toUpperCase();
+    if (m === 'AUTO') {
+        btn.classList.add('mode-auto');
+        btn.classList.remove('mode-manual');
+        if (card) {
+            card.classList.add('state-auto');
+            card.classList.remove('state-manual');
+        }
+        stateEl.textContent = 'Auto';
+    } else {
+        btn.classList.remove('mode-auto');
+        btn.classList.add('mode-manual');
+        if (card) {
+            card.classList.remove('state-auto');
+            card.classList.add('state-manual');
+        }
+        // keep state text as provided (ON/OFF)
+        stateEl.textContent = m;
+    }
+}
+
 // ===== WebSocket Functions =====
 function initWebSocket() {
     const gateway = `ws://${window.location.hostname}/ws`;
@@ -555,6 +583,7 @@ function onMessage(event) {
         if (data.room1 !== undefined) {
             const state = String(data.room1);
             room1StateTxt.textContent = state;
+            setRoomMode(1, state);
             
             if (state === "ON") {
                 light1State.textContent = "Active";
@@ -569,6 +598,7 @@ function onMessage(event) {
         if (data.room2 !== undefined) {
             const state = String(data.room2);
             room2StateTxt.textContent = state;
+            setRoomMode(2, state);
             
             if (state === "ON") {
                 light2State.textContent = "Active";
@@ -664,13 +694,13 @@ function sendRoom2Command(cmd) {
 }
 
 // ===== Room Control Event Listeners =====
-room1OnBtn.addEventListener("click", () => sendRoom1Command("ON"));
-room1OffBtn.addEventListener("click", () => sendRoom1Command("OFF"));
-room1AutoBtn.addEventListener("click", () => sendRoom1Command("AUTO"));
+room1OnBtn.addEventListener("click", () => { sendRoom1Command("ON"); setRoomMode(1, 'ON'); });
+room1OffBtn.addEventListener("click", () => { sendRoom1Command("OFF"); setRoomMode(1, 'OFF'); });
+room1AutoBtn.addEventListener("click", () => { sendRoom1Command("AUTO"); setRoomMode(1, 'AUTO'); });
 
-room2OnBtn.addEventListener("click", () => sendRoom2Command("ON"));
-room2OffBtn.addEventListener("click", () => sendRoom2Command("OFF"));
-room2AutoBtn.addEventListener("click", () => sendRoom2Command("AUTO"));
+room2OnBtn.addEventListener("click", () => { sendRoom2Command("ON"); setRoomMode(2, 'ON'); });
+room2OffBtn.addEventListener("click", () => { sendRoom2Command("OFF"); setRoomMode(2, 'OFF'); });
+room2AutoBtn.addEventListener("click", () => { sendRoom2Command("AUTO"); setRoomMode(2, 'AUTO'); });
 
 // Add clear notifications button
 document.getElementById("clearNotif")?.addEventListener("click", clearNotifications);
@@ -680,4 +710,9 @@ window.addEventListener("load", () => {
     setControlsEnabled(false);
     initWebSocket();
     displayNotifications();
+    // Apply initial visual state for room modes based on current DOM text
+    try {
+        setRoomMode(1, (room1StateTxt && room1StateTxt.textContent) || 'AUTO');
+        setRoomMode(2, (room2StateTxt && room2StateTxt.textContent) || 'AUTO');
+    } catch (e) { console.warn('Could not set initial room mode:', e); }
 });
