@@ -329,7 +329,6 @@ header {
 
 .sensor-display {
     width: 85%;
-    height: 150px;
     margin-top: 20px;
     background: var(--sensor-bg);
     border-radius: 12px;
