@@ -100,17 +100,8 @@ header {
 }
 
 .logout-btn {
-    background: transparent;
-    border: 2px solid rgba(255, 255, 255, 0.4);
-    color: #000000;
-    padding: 10px 20px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 600;
-    font-family: 'ShareTech', sans-serif;
-    transition: all 0.3s ease;
-    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 12px;
 }
 
 .logout-btn:hover {
@@ -963,9 +954,10 @@ footer {
     }
 
     .sensor-display {
-        width: 100%;
+        width: 85%;
+        max-width: 240px;
         height: 140px;
-        margin-top: 15px;
+        margin: 15px auto 0 auto;
     }
 
     .status-grid {
