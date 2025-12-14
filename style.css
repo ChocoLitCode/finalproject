@@ -470,7 +470,7 @@ footer {
 
 /* Clear button in notification header */
 #clearNotif {
-    background: var(--card-bg);
+    background: #ffffff;
     border: 2px solid var(--text);
     border-radius: 8px;
     padding: 4px 10px;
