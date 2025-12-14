@@ -557,8 +557,8 @@ footer {
 
 /* Buttons */
 .notif-clear {
-    background: var(--card-bg);
-    color: var(--text);
+    background: #ffffff;
+    color: #000000;
     border: 2px solid var(--text);
     border-radius: 10px;
     padding: 8px 16px;
@@ -566,12 +566,6 @@ footer {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-}
-
-.notif-clear:hover {
-    background: #ffffff;
-    color: #000000;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Dark mode adjustments */
