@@ -444,8 +444,21 @@ footer {
 
 .notif-close {
     background: #ffffff;
-    color: #000;
+    border: 2px solid var(--text);
+    border-radius: 10px;
+    padding: 3px 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.2s ease;
 }
+
+.notif-close:hover {
+    background: var(--text);
+    color: var(--bg);
+    transform: scale(1.05);
+}
+
 
 .dark-mode .notif-danger {
     border-left-color: #ff5252;
