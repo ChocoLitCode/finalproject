@@ -135,14 +135,15 @@ header {
 /* TITLES */
 .title {
     background: var(--title);
-    padding: 6px 18px;
-    margin-bottom: 15px;
+    padding: 10px 26px;
+    margin-bottom: 20px;
     border-radius: 30px;
     border: 2px solid var(--text);
-    font-size: 17px;
-    font-weight: bold;
+    font-size: 22px;
+    font-weight: 900;
     text-align: center;
     width: fit-content;
+    letter-spacing: 0.5px;
 }
 
 .container {
@@ -448,6 +449,11 @@ footer {
 
 .dark-mode .notif-warning {
     border-left-color: #ffeb3b;
+}
+
+.notif-close {
+    background: #ffffff;
+    color: #000;
 }
 
 .dark-mode .notif-danger {
@@ -901,38 +907,47 @@ footer {
         font-size: 18px;
     }
 
-    .row.two-col {
-        flex-direction: column;
-        gap: 40px;
-        align-items: center;
-    }
-
-    .row {
+    .container {
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 50px;
+     }
+
+    .row,
+    .row.two-col {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center;
         width: 100%;
+        gap: 40px;
     }
 
     .column {
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .status-panel,
+    .control-card,
+    .sensor-card {
+        width: 90%;
+        max-width: 320px;
+        margin: 0 auto;
+        box-sizing: border-box;
     }
 
     .controls-grid {
-        grid-template-columns: 1fr;
         display: flex;
         flex-direction: column;
-        width: 80%;
         align-items: center;
+        width: 100%;
         gap: 30px;
     }
 
-    .control-card {
-        width: 90%;
-        max-width: 250px;
-        margin: 0 auto;
-    }
 
     .sensor-grid-vertical {
         display: flex;
@@ -940,13 +955,6 @@ footer {
         align-items: center;
         gap: 30px;
         width: 100%;
-    }
-
-    .sensor-card {
-        width: 90%;
-        max-width: 260px;
-        height: auto;
-        padding: 12px;
     }
 
     .sensor-label {
@@ -960,15 +968,20 @@ footer {
         margin-top: 15px;
     }
 
-    .status-panel {
-        width: 90%;
-        max-width: 300px;
-        margin: 0 auto;
-    }
-
     .status-grid {
         grid-template-columns: 1fr 1fr;
         gap: 10px;
+    }
+
+    .status-panel {
+        display: flex;
+        justify-content: center;
+    }
+
+    .status-grid {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
     }
 
     footer {
